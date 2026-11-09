@@ -49,22 +49,22 @@ enum RemoteCatalog {
     // 左右各 7 颗对称排布，双侧键独立识别（音量加 / 音量减），坐标精准对齐 remote-front.png（225x662 像素级测绘）
     static let front: [RemoteButton] = [
         // 顶部与侧边（右侧 7 颗）
-        RemoteButton(id: "power", title: "电源", symbol: "power", side: 1, anchorX: 0.781, anchorY: 0.066, nativeSingle: "电源", fnLegend: ""),
-        RemoteButton(id: "volup", title: "音量+", symbol: "speaker.plus", side: 1, anchorX: 0.982, anchorY: 0.169, nativeSingle: "音量+", fnLegend: ""),
-        RemoteButton(id: "voldown", title: "音量−", symbol: "speaker.minus", side: 1, anchorX: 0.982, anchorY: 0.240, nativeSingle: "音量−", fnLegend: ""),
-        RemoteButton(id: "right", title: "右", symbol: "chevron.right", side: 1, anchorX: 0.698, anchorY: 0.236, nativeSingle: "右", fnLegend: ""),
-        RemoteButton(id: "voice", title: "语音", symbol: "mic", side: 1, anchorX: 0.692, anchorY: 0.392, nativeSingle: "语音", fnLegend: ""),
-        RemoteButton(id: "home", title: "主页", symbol: "house", side: 1, anchorX: 0.691, anchorY: 0.514, nativeSingle: "主页", fnLegend: ""),
-        RemoteButton(id: "menu", title: "菜单", symbol: "line.3.horizontal", side: 1, anchorX: 0.693, anchorY: 0.636, nativeSingle: "菜单", fnLegend: ""),
+        RemoteButton(id: "power", title: "电源", symbol: "power", side: 1, anchorX: 0.7822, anchorY: 0.0846, nativeSingle: "电源", fnLegend: ""),
+        RemoteButton(id: "volup", title: "音量+", symbol: "speaker.plus", side: 1, anchorX: 0.9650, anchorY: 0.2054, nativeSingle: "音量+", fnLegend: ""),
+        RemoteButton(id: "voldown", title: "音量−", symbol: "speaker.minus", side: 1, anchorX: 0.9650, anchorY: 0.2719, nativeSingle: "音量−", fnLegend: ""),
+        RemoteButton(id: "right", title: "右", symbol: "chevron.right", side: 1, anchorX: 0.7644, anchorY: 0.2372, nativeSingle: "右", fnLegend: ""),
+        RemoteButton(id: "voice", title: "语音", symbol: "mic", side: 1, anchorX: 0.7022, anchorY: 0.4003, nativeSingle: "语音", fnLegend: ""),
+        RemoteButton(id: "home", title: "主页", symbol: "house", side: 1, anchorX: 0.7022, anchorY: 0.5211, nativeSingle: "主页", fnLegend: ""),
+        RemoteButton(id: "menu", title: "菜单", symbol: "line.3.horizontal", side: 1, anchorX: 0.7022, anchorY: 0.6375, nativeSingle: "菜单", fnLegend: ""),
 
-        // 导航圆盘与左下（左侧 7 颗）
-        RemoteButton(id: "up", title: "上", symbol: "chevron.up", side: 0, anchorX: 0.493, anchorY: 0.166, nativeSingle: "上", fnLegend: ""),
-        RemoteButton(id: "left", title: "左", symbol: "chevron.left", side: 0, anchorX: 0.289, anchorY: 0.236, nativeSingle: "左", fnLegend: ""),
-        RemoteButton(id: "ok", title: "确认", symbol: "circle", side: 0, anchorX: 0.493, anchorY: 0.236, nativeSingle: "左键", fnLegend: ""),
-        RemoteButton(id: "down", title: "下", symbol: "chevron.down", side: 0, anchorX: 0.493, anchorY: 0.305, nativeSingle: "下", fnLegend: ""),
-        RemoteButton(id: "back", title: "返回", symbol: "arrow.left", side: 0, anchorX: 0.282, anchorY: 0.395, nativeSingle: "返回", fnLegend: ""),
-        RemoteButton(id: "mute", title: "静音", symbol: "speaker.slash", side: 0, anchorX: 0.284, anchorY: 0.515, nativeSingle: "静音", fnLegend: ""),
-        RemoteButton(id: "pointer", title: "飞鼠", symbol: "hand.raised", side: 0, anchorX: 0.291, anchorY: 0.637, nativeSingle: "切换飞鼠", fnLegend: "")
+        // 导航圆盘与左侧（左侧 7 颗）
+        RemoteButton(id: "up", title: "上", symbol: "chevron.up", side: 0, anchorX: 0.4978, anchorY: 0.1782, nativeSingle: "上", fnLegend: ""),
+        RemoteButton(id: "left", title: "左", symbol: "chevron.left", side: 0, anchorX: 0.2311, anchorY: 0.2372, nativeSingle: "左", fnLegend: ""),
+        RemoteButton(id: "ok", title: "确认", symbol: "circle", side: 0, anchorX: 0.4978, anchorY: 0.2372, nativeSingle: "左键", fnLegend: ""),
+        RemoteButton(id: "down", title: "下", symbol: "chevron.down", side: 0, anchorX: 0.4978, anchorY: 0.2961, nativeSingle: "下", fnLegend: ""),
+        RemoteButton(id: "back", title: "返回", symbol: "arrow.left", side: 0, anchorX: 0.2889, anchorY: 0.4003, nativeSingle: "返回", fnLegend: ""),
+        RemoteButton(id: "mute", title: "静音", symbol: "speaker.slash", side: 0, anchorX: 0.2889, anchorY: 0.5211, nativeSingle: "静音", fnLegend: ""),
+        RemoteButton(id: "pointer", title: "飞鼠", symbol: "hand.raised", side: 0, anchorX: 0.2889, anchorY: 0.6375, nativeSingle: "切换飞鼠", fnLegend: "")
     ]
 
     // 背面键位：坐标已精确对齐 remote-back.png（673x230 像素级测绘，45 颗物理按键几何质心对齐）
@@ -1403,28 +1403,42 @@ func keyRemapCallback(
 }
 
 // ============================================================
-// MARK: - 面板视觉（平面、单强调色、跟随系统浅色与深色）
+// MARK: - 现代 macOS 磨砂质感风面板视觉 (Modern Apple Glass / Sonoma)
 // ============================================================
+
+struct VisualEffectBackground: NSViewRepresentable {
+    var material: NSVisualEffectView.Material = .hudWindow
+    var blendingMode: NSVisualEffectView.BlendingMode = .behindWindow
+
+    func makeNSView(context: Context) -> NSVisualEffectView {
+        let view = NSVisualEffectView()
+        view.material = material
+        view.blendingMode = blendingMode
+        view.state = .active
+        return view
+    }
+
+    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
+        nsView.material = material
+        nsView.blendingMode = blendingMode
+    }
+}
+
 enum T1Palette {
-    static let canvas = dynamic(light: rgb(0.965, 0.965, 0.957), dark: rgb(0, 0, 0))
-    static let surface = dynamic(light: rgb(1, 1, 1), dark: rgb(0.094, 0.094, 0.094))
-    static let surfaceRaised = dynamic(light: rgb(0.945, 0.945, 0.937), dark: rgb(0.122, 0.122, 0.122))
-    static let ink = dynamic(light: rgb(0.094, 0.094, 0.094), dark: rgb(0.96, 0.96, 0.96))
-    static let inkInverse = dynamic(light: rgb(0.97, 0.97, 0.97), dark: rgb(0.07, 0.07, 0.07))
-    static let muted = dynamic(light: rgb(0.38, 0.38, 0.36), dark: rgb(0.62, 0.62, 0.60))
-    static let line = dynamic(light: rgb(0.90, 0.90, 0.88), dark: rgb(0.192, 0.192, 0.192))
-    static let accent = dynamic(light: rgb(0.180, 0.361, 0.420), dark: rgb(0.549, 0.722, 0.761))
-    static let fillInverse = dynamic(light: rgb(0.094, 0.094, 0.094), dark: rgb(0.93, 0.93, 0.91))
+    static let canvas = Color(red: 0.08, green: 0.085, blue: 0.10)
+    static let surface = Color(red: 0.13, green: 0.135, blue: 0.155).opacity(0.88)
+    static let surfaceRaised = Color(red: 0.17, green: 0.175, blue: 0.20)
+    static let ink = Color(white: 0.96)
+    static let inkInverse = Color(white: 0.08)
+    static let muted = Color(white: 0.55)
+    static let line = Color.white.opacity(0.10)
+    static let accent = Color(red: 0.0, green: 0.58, blue: 1.0)
+    static let accentSoft = Color(red: 0.0, green: 0.58, blue: 1.0).opacity(0.18)
+    static let fillInverse = Color(white: 0.94)
 
-    private static func rgb(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> NSColor {
-        NSColor(srgbRed: r, green: g, blue: b, alpha: 1)
-    }
-
-    private static func dynamic(light: NSColor, dark: NSColor) -> Color {
-        Color(NSColor(name: nil, dynamicProvider: { appearance in
-            appearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? dark : light
-        }))
-    }
+    static let fnCyan = Color(red: 0.0, green: 0.86, blue: 1.0)
+    static let emerald = Color(red: 0.0, green: 0.95, blue: 0.55)
+    static let warmAmber = Color(red: 1.0, green: 0.60, blue: 0.0)
 }
 
 struct ControlPanelView: View {
@@ -1448,17 +1462,14 @@ struct ControlPanelView: View {
             GeometryReader { geo in
                 if page == 0 {
                     ScrollView {
-                        VStack(alignment: .leading, spacing: 24) {
-                            masterCard
+                        VStack(alignment: .leading, spacing: 20) {
+                            masterHeroCard
                             presetSection
                             HStack(alignment: .top, spacing: 16) {
                                 feelSection
                                     .frame(width: columnWidth(in: geo.size.width), alignment: .top)
-                                VStack(alignment: .leading, spacing: 24) {
-                                    pointerSection
-                                    gripSection
-                                }
-                                .frame(width: columnWidth(in: geo.size.width), alignment: .top)
+                                pointerSection
+                                    .frame(width: columnWidth(in: geo.size.width), alignment: .top)
                             }
                         }
                         .padding(24)
@@ -1475,67 +1486,113 @@ struct ControlPanelView: View {
             Hairline()
             footer
         }
-        .background(T1Palette.canvas)
-        .frame(minWidth: 920, minHeight: 680)
+        .background(
+            ZStack {
+                VisualEffectBackground(material: .underWindowBackground, blendingMode: .behindWindow)
+                T1Palette.canvas.opacity(0.85)
+            }
+            .ignoresSafeArea()
+        )
+        .frame(minWidth: 940, minHeight: 720)
         .onReceive(Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()) { _ in
             s.publishStats()
         }
     }
 
+    // MARK: - 顶部导航栏整合
     private var header: some View {
-        HStack(alignment: .center, spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text("T1")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(T1Palette.ink)
-                Text(page == 0 ? "飞鼠平滑" : "按键映射")
-                    .font(.system(size: 12, weight: .regular))
-                    .foregroundColor(T1Palette.muted)
-            }
-            HStack(spacing: 0) {
-                pageTab("手感", index: 0)
-                pageTab("按键", index: 1)
-            }
-            .background(T1Palette.surface)
-            .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            Spacer(minLength: 16)
-            HStack(spacing: 8) {
-                Circle()
-                    .fill(s.isReceiving ? T1Palette.accent : T1Palette.line)
-                    .frame(width: 8, height: 8)
-                Text(s.isReceiving ? "接收中" : "等待移动")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(T1Palette.ink)
-            }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background(Capsule().fill(T1Palette.surface))
-            .overlay(Capsule().stroke(T1Palette.line, lineWidth: 1))
-            .accessibilityElement(children: .combine)
-            .accessibilityLabel(s.isReceiving ? "正在接收飞鼠移动" : "等待飞鼠移动")
+        HStack(alignment: .center, spacing: 14) {
+            // App 标志与状态指示
+            HStack(spacing: 10) {
+                Image(nsImage: NSApp.applicationIconImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 28, height: 28)
+                    .cornerRadius(7)
+                    .shadow(color: Color.black.opacity(0.15), radius: 2, y: 1)
 
-            Button(action: refreshHardwareIDs) {
-                Image(systemName: "arrow.clockwise")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(T1Palette.ink)
-                    .frame(width: 32, height: 32)
-                    .contentShape(Rectangle())
+                VStack(alignment: .leading, spacing: 1) {
+                    HStack(spacing: 6) {
+                        Text("T1 控制中心")
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundColor(T1Palette.ink)
+                        Text("v1.0")
+                            .font(.system(size: 10, weight: .bold, design: .monospaced))
+                            .foregroundColor(T1Palette.muted)
+                            .padding(.horizontal, 5)
+                            .padding(.vertical, 1)
+                            .background(T1Palette.surfaceRaised)
+                            .clipShape(Capsule())
+                    }
+                    HStack(spacing: 4) {
+                        Circle()
+                            .fill(s.isReceiving ? T1Palette.emerald : T1Palette.muted.opacity(0.5))
+                            .frame(width: 6, height: 6)
+                        Text(s.isReceiving ? "遥控器在线 · 数据接收中" : "就绪 · 等待移动或按键")
+                            .font(.system(size: 11, weight: .regular))
+                            .foregroundColor(T1Palette.muted)
+                    }
+                }
             }
-            .buttonStyle(PlainButtonStyle())
-            .background(RoundedRectangle(cornerRadius: 8).fill(T1Palette.surface))
+
+            Spacer(minLength: 16)
+
+            // 顶部分段切换器 (手感 | 按键)
+            HStack(spacing: 2) {
+                navPill("飞鼠手感", icon: "cursorarrow.motionlines", index: 0)
+                navPill("按键映射", icon: "keyboard", index: 1)
+            }
+            .padding(3)
+            .background(T1Palette.surfaceRaised.opacity(0.8))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
-            .help("重新扫描硬件")
-            .accessibilityLabel("重新扫描硬件")
+
+            Spacer(minLength: 16)
+
+            // 右侧状态与刷新按钮
+            HStack(spacing: 8) {
+                Button(action: refreshHardwareIDs) {
+                    Image(systemName: "arrow.clockwise")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(T1Palette.ink)
+                        .frame(width: 30, height: 30)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .background(RoundedRectangle(cornerRadius: 7).fill(T1Palette.surface))
+                .overlay(RoundedRectangle(cornerRadius: 7).stroke(T1Palette.line, lineWidth: 1))
+                .help("重新扫描并刷新 T1 硬件设备")
+            }
         }
         .padding(.horizontal, 24)
-        .padding(.top, 36)
-        .padding(.bottom, 16)
+        .padding(.top, 24)
+        .padding(.bottom, 14)
+    }
+
+    private func navPill(_ title: String, icon: String, index: Int) -> some View {
+        Button(action: { page = index }) {
+            HStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 12, weight: .medium))
+                Text(title)
+                    .font(.system(size: 12, weight: .semibold))
+            }
+            .foregroundColor(page == index ? T1Palette.inkInverse : T1Palette.ink)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 6)
+            .background(
+                page == index ?
+                RoundedRectangle(cornerRadius: 6).fill(T1Palette.fillInverse) :
+                RoundedRectangle(cornerRadius: 6).fill(Color.clear)
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
     }
 
     private var permissionBanner: some View {
         HStack(spacing: 16) {
-            Text("辅助功能权限未就绪。请在「系统设置 → 隐私与安全性 → 辅助功能」中勾选 T1（若已在列表中，请先关闭再重新打开）。")
+            Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundColor(T1Palette.warmAmber)
+            Text("辅助功能权限未就绪。请在「系统设置 → 隐私与安全性 → 辅助功能」中勾选 T1。")
                 .font(.system(size: 12, weight: .medium))
                 .foregroundColor(T1Palette.ink)
             Spacer(minLength: 16)
@@ -1544,69 +1601,114 @@ struct ControlPanelView: View {
                 .font(.system(size: 12, weight: .medium))
                 .foregroundColor(T1Palette.inkInverse)
                 .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(RoundedRectangle(cornerRadius: 8).fill(T1Palette.fillInverse))
+                .padding(.vertical, 6)
+                .background(RoundedRectangle(cornerRadius: 7).fill(T1Palette.fillInverse))
         }
         .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.vertical, 10)
         .background(T1Palette.surface)
     }
 
-    private var masterCard: some View {
+    // MARK: - 手感调节页组件
+    private var masterHeroCard: some View {
         PanelCard {
-            HStack(alignment: .center, spacing: 16) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("绳子平滑")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(T1Palette.ink)
-                    Text(s.isEngineEnabled ? "正在改写这只遥控器的指针" : "指针按系统原样移动")
-                        .font(.system(size: 12, weight: .regular))
+            HStack(alignment: .center, spacing: 24) {
+                // 左侧引擎主开关与状态
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack(spacing: 12) {
+                        ZStack {
+                            Circle()
+                                .fill(s.isEngineEnabled ? T1Palette.accentSoft : T1Palette.surfaceRaised)
+                                .frame(width: 44, height: 44)
+                            Image(systemName: "cursorarrow.motionlines")
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(s.isEngineEnabled ? T1Palette.accent : T1Palette.muted)
+                        }
+                        VStack(alignment: .leading, spacing: 3) {
+                            HStack(spacing: 6) {
+                                Text("飞鼠平滑引擎")
+                                    .font(.system(size: 17, weight: .bold))
+                                    .foregroundColor(T1Palette.ink)
+                                Circle()
+                                    .fill(s.isEngineEnabled ? T1Palette.emerald : T1Palette.muted.opacity(0.5))
+                                    .frame(width: 7, height: 7)
+                            }
+                            Text(s.isEngineEnabled ? "动态改写光标 · 吸收手部微小抖动" : "原生直通模式 · 未开启滤波")
+                                .font(.system(size: 12, weight: .regular))
+                                .foregroundColor(T1Palette.muted)
+                        }
+                    }
+
+                    Text("专属接管 T1 飞鼠传感器，MacBook 触控板与外接鼠标 100% 保持原生手感。")
+                        .font(.system(size: 11, weight: .regular))
                         .foregroundColor(T1Palette.muted)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Toggle("启用平滑引擎", isOn: $s.isEngineEnabled)
+                        .toggleStyle(SwitchToggleStyle())
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(T1Palette.ink)
                 }
-                Spacer(minLength: 16)
-                Toggle("绳子平滑", isOn: $s.isEngineEnabled)
-                    .toggleStyle(SwitchToggleStyle())
-                    .labelsHidden()
-                    .accentColor(T1Palette.ink)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+                // 中间垂直分隔线
+                Rectangle()
+                    .fill(T1Palette.line)
+                    .frame(width: 1, height: 90)
+
+                // 右侧微抖滤除率与帧数仪表
+                HStack(spacing: 24) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("微抖滤除率")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(T1Palette.muted)
+                        Text(s.absorbedPercent)
+                            .font(.system(size: 28, weight: .bold, design: .monospaced))
+                            .foregroundColor(T1Palette.accent)
+                        MeterBar(ratio: s.absorbedRatio)
+                            .frame(width: 130, height: 6)
+                        Text("已吸收抖动微位移占比")
+                            .font(.system(size: 10, weight: .regular))
+                            .foregroundColor(T1Palette.muted)
+                    }
+                    .frame(minWidth: 130, alignment: .leading)
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("累计处理帧数")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(T1Palette.muted)
+                        Text(frameCount)
+                            .font(.system(size: 28, weight: .bold, design: .monospaced))
+                            .foregroundColor(T1Palette.ink)
+                        Spacer(minLength: 2)
+                        Button(action: { s.resetStats() }) {
+                            HStack(spacing: 4) {
+                                Image(systemName: "arrow.counterclockwise")
+                                    .font(.system(size: 10))
+                                Text("清零统计")
+                                    .font(.system(size: 11, weight: .medium))
+                            }
+                            .foregroundColor(T1Palette.muted)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 4)
+                            .background(T1Palette.surfaceRaised)
+                            .overlay(RoundedRectangle(cornerRadius: 6).stroke(T1Palette.line, lineWidth: 1))
+                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .frame(minWidth: 130, alignment: .leading)
+                }
             }
-            Hairline()
-            HStack(alignment: .firstTextBaseline, spacing: 24) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("吸收")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(T1Palette.muted)
-                    Text(s.absorbedPercent)
-                        .font(.system(size: 24, weight: .semibold, design: .monospaced))
-                        .foregroundColor(T1Palette.ink)
-                }
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("帧数")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(T1Palette.muted)
-                    Text(frameCount)
-                        .font(.system(size: 24, weight: .semibold, design: .monospaced))
-                        .foregroundColor(T1Palette.ink)
-                }
-                Spacer(minLength: 8)
-                Button("清零") { s.resetStats() }
-                    .buttonStyle(PlainButtonStyle())
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(T1Palette.ink)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(T1Palette.surfaceRaised))
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
-            }
-            MeterBar(ratio: s.absorbedRatio)
         }
     }
 
     private var presetSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            sectionTitle(s.matchingPreset() == nil ? "预设 · 自定义" : "预设")
+            sectionTitle(s.matchingPreset() == nil ? "手感预设 · 自定义" : "手感预设")
             LazyVGrid(
-                columns: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)],
-                spacing: 8
+                columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)],
+                spacing: 10
             ) {
                 ForEach(T1Settings.Preset.allCases, id: \.self) { preset in
                     PresetCard(preset: preset, selected: s.matchingPreset() == preset) {
@@ -1619,40 +1721,39 @@ struct ControlPanelView: View {
 
     private var feelSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            sectionTitle("平滑")
+            sectionTitle("平滑算法核心")
             PanelCard {
                 ParamSlider(
-                    title: "绳长",
+                    title: "绳长死区",
                     value: String(format: "%.1f px", s.ropeLength),
-                    hint: "这个半径里的微抖不会带动光标",
+                    hint: "死区半径内的微小抖动将被完全吸收，光标保持静止",
                     amount: $s.ropeLength,
                     range: 0...12,
                     step: 0.2
                 )
                 Hairline()
                 ParamSlider(
-                    title: "跟手",
+                    title: "跟手响应速度",
                     value: String(format: "%.2f", s.followRate),
-                    hint: "越小越稳，越大越贴手",
+                    hint: "越小越平滑稳重，越大光标吸附越灵敏贴手",
                     amount: $s.followRate,
                     range: 0.05...1.0,
                     step: 0.01
                 )
                 Hairline()
                 HStack(alignment: .center, spacing: 16) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("快速收绳")
-                            .font(.system(size: 14, weight: .medium))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("动态收绳 (挥动自适应)")
+                            .font(.system(size: 13, weight: .semibold))
                             .foregroundColor(T1Palette.ink)
-                        Text("大幅挥动时绳子自动变短")
-                            .font(.system(size: 12, weight: .regular))
+                        Text("大幅快速挥动时绳长自动收短，杜绝大动作拖尾粘滞")
+                            .font(.system(size: 11, weight: .regular))
                             .foregroundColor(T1Palette.muted)
                     }
                     Spacer(minLength: 16)
                     Toggle("快速收绳", isOn: $s.adaptiveRope)
                         .toggleStyle(SwitchToggleStyle())
                         .labelsHidden()
-                        .accentColor(T1Palette.ink)
                 }
             }
         }
@@ -1660,63 +1761,55 @@ struct ControlPanelView: View {
 
     private var pointerSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            sectionTitle("指针")
+            sectionTitle("灵敏度与握持校正")
             PanelCard {
                 ParamSlider(
-                    title: "横向",
+                    title: "横向倍率 (X)",
                     value: String(format: "%.2f×", s.scaleX),
-                    hint: "左右摆动的幅度",
+                    hint: "水平左右摆动飞鼠时光标位移放大倍率",
                     amount: $s.scaleX,
                     range: 0.5...2.5,
                     step: 0.05
                 )
                 Hairline()
                 ParamSlider(
-                    title: "纵向",
+                    title: "纵向倍率 (Y)",
                     value: String(format: "%.2f×", s.scaleY),
-                    hint: "上下摆动的幅度",
+                    hint: "垂直上下摆动飞鼠时光标位移放大倍率",
                     amount: $s.scaleY,
                     range: 0.5...2.5,
                     step: 0.05
                 )
-            }
-        }
-    }
-
-    private var gripSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            sectionTitle("右手")
-            PanelCard {
+                Hairline()
                 HStack(alignment: .center, spacing: 16) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("握持校正")
-                            .font(.system(size: 14, weight: .medium))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("右手握持生理校正")
+                            .font(.system(size: 13, weight: .semibold))
                             .foregroundColor(T1Palette.ink)
-                        Text("补偿手腕内旋和向右扫动")
-                            .font(.system(size: 12, weight: .regular))
+                        Text("补偿右手自然内旋握姿及向右扫动的人体物理阻尼")
+                            .font(.system(size: 11, weight: .regular))
                             .foregroundColor(T1Palette.muted)
                     }
                     Spacer(minLength: 16)
-                    Toggle("握持校正", isOn: $s.rightHandMode)
+                    Toggle("右手握持校正", isOn: $s.rightHandMode)
                         .toggleStyle(SwitchToggleStyle())
                         .labelsHidden()
-                        .accentColor(T1Palette.ink)
                 }
                 if s.rightHandMode {
                     Hairline()
                     ParamSlider(
-                        title: "手腕倾角",
+                        title: "手腕内旋倾角",
                         value: signedDegrees(s.tiltAngle),
-                        hint: "把自然内旋的坐标系摆正",
+                        hint: "逆时针旋转坐标系，将手腕自然倾斜拉正",
                         amount: $s.tiltAngle,
                         range: -20...20,
                         step: 1
                     )
                     Hairline()
                     ParamSlider(
-                        title: "向右补偿",
+                        title: "向右扫动补偿",
                         value: String(format: "%.2f×", s.rightBias),
-                        hint: "向右扫动时略微加大",
+                        hint: "向右外扫时光标增益，补偿反向肌肉发力疲劳",
                         amount: $s.rightBias,
                         range: 1.0...1.5,
                         step: 0.05
@@ -1726,51 +1819,64 @@ struct ControlPanelView: View {
         }
     }
 
+    // MARK: - 按键映射页整合
     private var keyMapPage: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .center, spacing: 16) {
-                Text("按键映射")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(T1Palette.ink)
-                Spacer(minLength: 12)
-                HStack(spacing: 0) {
-                    pageTab("正面", index: 0, selection: side) { side = 0 }
-                    pageTab("背面", index: 1, selection: side) { side = 1 }
+        VStack(alignment: .leading, spacing: 14) {
+            // 次级控制工具栏
+            HStack(alignment: .center, spacing: 14) {
+                // 正反面切换 Pill
+                HStack(spacing: 2) {
+                    sidePill("正面遥控 (14键)", icon: "rectangle.portrait", sideIndex: 0)
+                    sidePill("背面全键盘 (45键)", icon: "keyboard.fill", sideIndex: 1)
                 }
-                .background(T1Palette.surface)
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
+                .padding(3)
+                .background(T1Palette.surfaceRaised.opacity(0.8))
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+                .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
 
-                Button(side == 0 ? "重置正面映射" : "重置背面映射") {
-                    if side == 0 {
-                        s.clearFrontMappings()
-                    } else {
-                        s.clearBackMappings()
-                    }
-                }
-                .buttonStyle(PlainButtonStyle())
-                .font(.system(size: 12, weight: .medium))
-                .foregroundColor(T1Palette.muted)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(T1Palette.surface)
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(T1Palette.line, lineWidth: 1))
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .contextMenu(ContextMenu(menuItems: {
+                Spacer()
+
+                // 重置映射菜单
+                Menu {
                     Button("重置正面映射") { s.clearFrontMappings() }
                     Button("重置背面映射") { s.clearBackMappings() }
                     Divider()
-                    Button("重置全部映射 (正面+背面)") { s.clearAllMappings() }
-                }))
+                    Button("重置全部按键映射 (正面+背面)") { s.clearAllMappings() }
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "arrow.counterclockwise")
+                            .font(.system(size: 11))
+                        Text(side == 0 ? "重置正面映射" : "重置背面映射")
+                            .font(.system(size: 12, weight: .medium))
+                        Image(systemName: "chevron.down")
+                            .font(.system(size: 9))
+                    }
+                    .foregroundColor(T1Palette.muted)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(T1Palette.surface)
+                    .overlay(RoundedRectangle(cornerRadius: 7).stroke(T1Palette.line, lineWidth: 1))
+                    .clipShape(RoundedRectangle(cornerRadius: 7))
+                }
+                .menuStyle(BorderlessButtonMenuStyle())
 
-                Toggle("启用", isOn: Binding(
-                    get: { s.keyMapEnabled },
-                    set: { s.setKeyMapEnabled($0) }
-                ))
-                .toggleStyle(SwitchToggleStyle())
-                .accentColor(T1Palette.ink)
+                // 按键映射总开关
+                HStack(spacing: 8) {
+                    Text("按键改键")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(T1Palette.ink)
+                    Toggle("", isOn: Binding(
+                        get: { s.keyMapEnabled },
+                        set: { s.setKeyMapEnabled($0) }
+                    ))
+                    .toggleStyle(SwitchToggleStyle())
+                    .labelsHidden()
+                }
+                .padding(.leading, 6)
             }
+
             KeyMappingHUD(side: side)
+
             Group {
                 if side == 0 {
                     MapStage(buttons: RemoteCatalog.front, imageName: "remote-front.png")
@@ -1781,27 +1887,32 @@ struct ControlPanelView: View {
         }
     }
 
-    private func pageTab(_ title: String, index: Int) -> some View {
-        pageTab(title, index: index, selection: page) { page = index }
-    }
-
-    private func pageTab(_ title: String, index: Int, selection: Int, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Text(title)
-                .font(.system(size: 12, weight: .medium))
-                .foregroundColor(selection == index ? T1Palette.inkInverse : T1Palette.ink)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(selection == index ? T1Palette.fillInverse : Color.clear)
+    private func sidePill(_ title: String, icon: String, sideIndex: Int) -> some View {
+        Button(action: { side = sideIndex }) {
+            HStack(spacing: 5) {
+                Image(systemName: icon)
+                    .font(.system(size: 11))
+                Text(title)
+                    .font(.system(size: 12, weight: .medium))
+            }
+            .foregroundColor(side == sideIndex ? T1Palette.inkInverse : T1Palette.ink)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(side == sideIndex ? RoundedRectangle(cornerRadius: 6).fill(T1Palette.fillInverse) : RoundedRectangle(cornerRadius: 6).fill(Color.clear))
         }
         .buttonStyle(PlainButtonStyle())
     }
 
     private var footer: some View {
         HStack(spacing: 16) {
-            Text("触控板和键盘保持系统原生")
-                .font(.system(size: 12, weight: .regular))
-                .foregroundColor(T1Palette.muted)
+            HStack(spacing: 6) {
+                Image(systemName: "checkmark.shield.fill")
+                    .foregroundColor(T1Palette.emerald)
+                    .font(.system(size: 13))
+                Text("MacBook 触控板与外接鼠标 100% 保持原生直通，绝不干扰正常使用")
+                    .font(.system(size: 12, weight: .regular))
+                    .foregroundColor(T1Palette.muted)
+            }
             Spacer(minLength: 16)
             Toggle("在 Dock 中显示", isOn: $s.showInDock)
                 .toggleStyle(SwitchToggleStyle())
@@ -1814,7 +1925,7 @@ struct ControlPanelView: View {
                 .keyboardShortcut("q", modifiers: .command)
         }
         .padding(.horizontal, 24)
-        .padding(.vertical, 16)
+        .padding(.vertical, 14)
         .background(T1Palette.canvas)
     }
 
@@ -1830,7 +1941,7 @@ struct ControlPanelView: View {
 
     private func sectionTitle(_ text: String) -> some View {
         Text(text)
-            .font(.system(size: 12, weight: .medium))
+            .font(.system(size: 12, weight: .bold))
             .foregroundColor(T1Palette.muted)
     }
 
@@ -1842,6 +1953,7 @@ struct ControlPanelView: View {
     }
 }
 
+// MARK: - 录制与状态 HUD
 private struct KeyMappingHUD: View {
     @ObservedObject var s = gSettings
     let side: Int
@@ -1863,17 +1975,17 @@ private struct KeyMappingHUD: View {
     var body: some View {
         Group {
             if let buttonID = s.captureButtonID, let slot = s.captureSlot {
-                // 1. 录制中状态 (高亮强调、动画呼吸指示、快捷预设键)
+                // 1. 录制中状态 (高亮呼吸卡片)
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(spacing: 10) {
                         Circle()
-                            .fill(Color.orange)
-                            .frame(width: 10, height: 10)
+                            .fill(T1Palette.warmAmber)
+                            .frame(width: 8, height: 8)
                         HStack(spacing: 6) {
                             Text("正在录制按键：")
                                 .font(.system(size: 13, weight: .regular))
                                 .foregroundColor(T1Palette.ink)
-                            Text("「\(captureButtonTitle)」")
+                            Text("【\(captureButtonTitle)】")
                                 .font(.system(size: 14, weight: .bold))
                                 .foregroundColor(T1Palette.ink)
                             Text("➔")
@@ -1881,14 +1993,14 @@ private struct KeyMappingHUD: View {
                                 .foregroundColor(T1Palette.muted)
                             Text("[\(slotName)] 动作")
                                 .font(.system(size: 13, weight: .bold))
-                                .foregroundColor(T1Palette.accent)
+                                .foregroundColor(T1Palette.warmAmber)
                         }
                         Spacer()
                         Button(action: { s.cancelCapture() }) {
                             HStack(spacing: 4) {
                                 Image(systemName: "xmark")
                                     .font(.system(size: 10, weight: .bold))
-                                Text("取消录制 (Esc)")
+                                Text("取消 (Esc)")
                                     .font(.system(size: 11, weight: .medium))
                             }
                             .foregroundColor(T1Palette.ink)
@@ -1901,15 +2013,16 @@ private struct KeyMappingHUD: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                     HStack(spacing: 8) {
-                        Text("请直接按下 Mac 键盘或遥控器任意键，或点击右侧快捷设定：")
+                        Text("请直接按下物理键盘或遥控器任意键，或点击右侧快捷动作：")
                             .font(.system(size: 11, weight: .regular))
                             .foregroundColor(T1Palette.muted)
                         Spacer()
                         HStack(spacing: 6) {
-                            quickChip("左键", code: 1001, id: buttonID, slot: slot)
-                            quickChip("右键", code: 1002, id: buttonID, slot: slot)
+                            quickChip("鼠标左键", code: 1001, id: buttonID, slot: slot)
+                            quickChip("鼠标右键", code: 1002, id: buttonID, slot: slot)
                             quickChip("回车", code: 36, id: buttonID, slot: slot)
                             quickChip("空格", code: 49, id: buttonID, slot: slot)
+                            quickChip("退格", code: 51, id: buttonID, slot: slot)
                             quickChip("音量+", code: 2000, id: buttonID, slot: slot)
                             quickChip("音量−", code: 2001, id: buttonID, slot: slot)
                             quickChip("Esc", code: 53, id: buttonID, slot: slot)
@@ -1921,52 +2034,52 @@ private struct KeyMappingHUD: View {
                 .padding(.vertical, 10)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(T1Palette.accent.opacity(0.08))
+                        .fill(T1Palette.warmAmber.opacity(0.08))
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(T1Palette.accent, lineWidth: 1.5)
+                        .stroke(T1Palette.warmAmber.opacity(0.8), lineWidth: 1.5)
                 )
             } else if let success = s.lastSuccessNote, CFAbsoluteTimeGetCurrent() - s.lastSuccessTime < 4.0 {
-                // 2. 映射成功提示 (绿色高亮横幅，持续 4 秒)
+                // 2. 映射成功提示
                 HStack(spacing: 10) {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color.green)
+                        .font(.system(size: 14))
+                        .foregroundColor(T1Palette.emerald)
                     Text(success)
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(T1Palette.ink)
                     Spacer()
                     Text("✓ 已实时保存生效")
                         .font(.system(size: 11, weight: .medium))
-                        .foregroundColor(Color.green)
+                        .foregroundColor(T1Palette.emerald)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 3)
-                        .background(Color.green.opacity(0.12))
+                        .background(T1Palette.emerald.opacity(0.12))
                         .clipShape(Capsule())
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 10)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.green.opacity(0.06))
+                        .fill(T1Palette.emerald.opacity(0.08))
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.green.opacity(0.4), lineWidth: 1)
+                        .stroke(T1Palette.emerald.opacity(0.4), lineWidth: 1)
                 )
             } else {
-                // 3. 常规就绪状态与实时按键监听回显
+                // 3. 常规就绪状态
                 HStack(spacing: 10) {
                     Circle()
-                        .fill(s.keyMapEnabled ? Color.green : T1Palette.muted)
-                        .frame(width: 8, height: 8)
-                    Text(s.keyMapEnabled ? "映射已启用" : "映射已关闭（右上角可开启）")
+                        .fill(s.keyMapEnabled ? T1Palette.emerald : T1Palette.muted)
+                        .frame(width: 7, height: 7)
+                    Text(s.keyMapEnabled ? "映射已启用" : "映射未开启（右上角开启生效）")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(s.keyMapEnabled ? T1Palette.ink : T1Palette.muted)
                     Text("•")
                         .foregroundColor(T1Palette.muted.opacity(0.5))
-                    Text(side == 0 ? "点击下方按键卡片上的「单击 / 双击 / 长按」开始映射" : "点击下方按键卡片开始映射，带蓝色符号键需配合遥控器 Fn 键")
+                    Text(side == 0 ? "点击卡片上的「单击 / 双击 / 长按」开始映射" : "点击键帽开始映射；青色符号代表配合遥控器 Fn 组合键")
                         .font(.system(size: 12, weight: .regular))
                         .foregroundColor(T1Palette.muted)
                     Spacer()
@@ -1976,14 +2089,14 @@ private struct KeyMappingHUD: View {
                                 .font(.system(size: 11, weight: .regular))
                                 .foregroundColor(T1Palette.muted)
                             Text(lastInput)
-                                .font(.system(size: 11, weight: .semibold))
+                                .font(.system(size: 11, weight: .bold))
                                 .foregroundColor(T1Palette.accent)
                         }
                         .padding(.horizontal, 8)
                         .padding(.vertical, 3)
                         .background(T1Palette.surface)
-                        .overlay(RoundedRectangle(cornerRadius: 4).stroke(T1Palette.line, lineWidth: 1))
-                        .clipShape(RoundedRectangle(cornerRadius: 4))
+                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(T1Palette.line, lineWidth: 1))
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                     }
                 }
                 .padding(.horizontal, 14)
@@ -2008,16 +2121,17 @@ private struct KeyMappingHUD: View {
             Text(title)
                 .font(.system(size: 11, weight: .medium))
                 .foregroundColor(T1Palette.ink)
-                .padding(.horizontal, 7)
+                .padding(.horizontal, 8)
                 .padding(.vertical, 4)
                 .background(T1Palette.surface)
-                .overlay(RoundedRectangle(cornerRadius: 4).stroke(T1Palette.line, lineWidth: 1))
-                .clipShape(RoundedRectangle(cornerRadius: 4))
+                .overlay(RoundedRectangle(cornerRadius: 5).stroke(T1Palette.line, lineWidth: 1))
+                .clipShape(RoundedRectangle(cornerRadius: 5))
         }
         .buttonStyle(PlainButtonStyle())
     }
 }
 
+// MARK: - 正面按键卡片 (MapCard)
 private struct MapCard: View {
     let button: RemoteButton
     let active: Bool
@@ -2025,39 +2139,54 @@ private struct MapCard: View {
     var width: CGFloat = 240
     @ObservedObject var s = gSettings
 
+    private var hasAnyCustomMap: Bool {
+        guard let map = s.buttonMap(button.id) else { return false }
+        return map.single != nil || map.doubleTap != nil || map.hold != nil
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
                 Image(systemName: button.symbol)
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(active ? T1Palette.accent : T1Palette.ink)
-                    .frame(width: 16, height: 16)
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(active ? T1Palette.warmAmber : (selected ? T1Palette.accent : T1Palette.ink))
+                    .frame(width: 18, height: 18)
                 Text(button.title)
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(T1Palette.ink)
                 if active {
                     Text("• 录制中")
                         .font(.system(size: 10, weight: .bold))
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(T1Palette.warmAmber)
                 }
                 Spacer(minLength: 4)
+                if hasAnyCustomMap {
+                    Circle()
+                        .fill(T1Palette.emerald)
+                        .frame(width: 5, height: 5)
+                        .shadow(color: T1Palette.emerald.opacity(0.8), radius: 2)
+                }
             }
-            HStack(spacing: 4) {
+            HStack(spacing: 5) {
                 gestureSlot("单击", slot: 0)
                 gestureSlot("双击", slot: 1)
                 gestureSlot("长按", slot: 2)
             }
         }
-        .padding(6)
-        .frame(width: width, height: 76, alignment: .leading)
+        .padding(8)
+        .frame(width: width, height: 72, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(active ? T1Palette.accent.opacity(0.04) : T1Palette.surface)
+                .fill(active ? T1Palette.warmAmber.opacity(0.06) : (selected ? T1Palette.accentSoft : T1Palette.surface))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(active ? T1Palette.accent : (selected ? T1Palette.fillInverse : T1Palette.line), lineWidth: active ? 2 : (selected ? 1.5 : 1))
+                .stroke(
+                    active ? T1Palette.warmAmber : (selected ? T1Palette.accent : T1Palette.line),
+                    lineWidth: (active || selected) ? 1.5 : 1
+                )
         )
+        .shadow(color: Color.black.opacity(selected ? 0.08 : 0.02), radius: selected ? 4 : 2, x: 0, y: 1)
     }
 
     private func gestureValue(_ slot: Int) -> Int? {
@@ -2070,9 +2199,9 @@ private struct MapCard: View {
     }
 
     private func gestureSlot(_ label: String, slot: Int) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: 3) {
             Text(label)
-                .font(.system(size: 11, weight: .regular))
+                .font(.system(size: 10, weight: .regular))
                 .foregroundColor(T1Palette.muted)
             slotControl(slot)
         }
@@ -2132,17 +2261,17 @@ private struct MapCard: View {
 
     private func slotLabel(_ text: String, waiting: Bool, isCustom: Bool) -> some View {
         Text(text)
-            .font(.system(size: 11, weight: waiting ? .bold : .medium))
-            .foregroundColor(waiting ? Color.white : (text == "未设置" ? T1Palette.muted : (isCustom ? T1Palette.accent : T1Palette.ink)))
+            .font(.system(size: 11, weight: waiting ? .bold : (isCustom ? .semibold : .medium)))
+            .foregroundColor(waiting ? Color.white : (text == "未设置" ? T1Palette.muted : (isCustom ? T1Palette.fnCyan : T1Palette.ink)))
             .lineLimit(1)
             .frame(maxWidth: .infinity, minHeight: 24)
             .background(
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(waiting ? T1Palette.accent : (isCustom ? T1Palette.accent.opacity(0.12) : T1Palette.surfaceRaised))
+                    .fill(waiting ? T1Palette.warmAmber : (isCustom ? T1Palette.accent.opacity(0.22) : T1Palette.surfaceRaised))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .stroke(waiting ? T1Palette.accent : (isCustom ? T1Palette.accent.opacity(0.4) : Color.clear), lineWidth: waiting ? 1.5 : 1)
+                    .stroke(waiting ? T1Palette.warmAmber : (isCustom ? T1Palette.fnCyan.opacity(0.6) : Color.clear), lineWidth: 1)
             )
     }
 }
@@ -2177,93 +2306,7 @@ private struct RemotePhoto: View {
     }
 }
 
-private struct KeyChip: View {
-    let button: RemoteButton
-    let selected: Bool
-    var compact: Bool = false
-    let action: () -> Void
-    @ObservedObject var s = gSettings
-
-    private var hasCustomMap: Bool {
-        guard let m = s.buttonMap(button.id) else { return false }
-        return m.single != nil || m.doubleTap != nil || m.hold != nil
-    }
-
-    private var singleText: String {
-        if let code = s.buttonMap(button.id)?.single {
-            return "单击 " + KeyCatalog.targetName(code)
-        }
-        return "单击 " + button.nativeSingle
-    }
-
-    var body: some View {
-        Button(action: action) {
-            VStack(alignment: .leading, spacing: compact ? 0 : 4) {
-                HStack(spacing: 4) {
-                    Text(button.title)
-                        .font(.system(size: compact ? 11 : 13, weight: .semibold))
-                        .foregroundColor(selected ? T1Palette.accent : T1Palette.ink)
-                        .lineLimit(1)
-                    if hasCustomMap {
-                        Circle()
-                            .fill(T1Palette.accent)
-                            .frame(width: 4, height: 4)
-                    }
-                    if !compact {
-                        Spacer(minLength: 4)
-                        fnMark
-                    }
-                }
-                if !compact {
-                    Text(singleText)
-                        .font(.system(size: 11, weight: .regular))
-                        .foregroundColor(T1Palette.muted)
-                        .lineLimit(1)
-                }
-            }
-            .padding(.horizontal, compact ? 4 : 8)
-            .padding(.vertical, 2)
-            .frame(maxWidth: .infinity, minHeight: compact ? 26 : 32, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 6).fill(selected ? T1Palette.accent.opacity(0.12) : T1Palette.surface))
-            .overlay(RoundedRectangle(cornerRadius: 6).stroke(selected ? T1Palette.accent : (hasCustomMap ? T1Palette.accent.opacity(0.5) : T1Palette.line), lineWidth: selected ? 1.5 : 1))
-        }
-        .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel(button.title + "，" + singleText)
-        .contextMenu(ContextMenu(menuItems: {
-            Group {
-                Button("选中按键: \(button.title)") { s.selectedBackKeyID = button.id }
-                Divider()
-                Button("恢复默认") {
-                    s.setGesture(id: button.id, slot: 0, target: nil)
-                    s.setGesture(id: button.id, slot: 1, target: nil)
-                    s.setGesture(id: button.id, slot: 2, target: nil)
-                }
-                Button("单击 ➔ 鼠标左键") { s.setGesture(id: button.id, slot: 0, target: 1001) }
-                Button("单击 ➔ 鼠标右键") { s.setGesture(id: button.id, slot: 0, target: 1002) }
-            }
-            Group {
-                Divider()
-                Button("单击 ➔ 回车 (Enter)") { s.setGesture(id: button.id, slot: 0, target: 36) }
-                Button("单击 ➔ 空格 (Space)") { s.setGesture(id: button.id, slot: 0, target: 49) }
-                Button("单击 ➔ 退格 (Backspace)") { s.setGesture(id: button.id, slot: 0, target: 51) }
-                Button("单击 ➔ Esc") { s.setGesture(id: button.id, slot: 0, target: 53) }
-                Button("单击 ➔ 音量+") { s.setGesture(id: button.id, slot: 0, target: 2000) }
-                Button("单击 ➔ 音量−") { s.setGesture(id: button.id, slot: 0, target: 2001) }
-            }
-        }))
-    }
-
-    @ViewBuilder
-    private var fnMark: some View {
-        if !button.fnLegend.isEmpty {
-            Text("Fn " + button.fnLegend)
-                .font(.system(size: 11, weight: .medium))
-                .foregroundColor(T1Palette.accent)
-                .lineLimit(1)
-        }
-    }
-}
-
+// MARK: - 背面按键检查器卡片 (BackKeyInspectorCard)
 private struct BackKeyInspectorCard: View {
     let button: RemoteButton
     let active: Bool
@@ -2286,105 +2329,139 @@ private struct BackKeyInspectorCard: View {
             return KeyCatalog.targetName(code)
         }
         if slot == 0 && !button.nativeSingle.isEmpty {
-            return button.nativeSingle
+            return "原生: \(button.nativeSingle)"
         }
         return "未设置"
     }
 
-    private func slotControl(_ slot: Int) -> some View {
-        let clearTitle = button.nativeSingle.isEmpty ? "未设置" : "恢复默认"
-        let waiting = active && s.captureSlot == slot
+    private func slotControl(_ label: String, slot: Int) -> some View {
+        let isWaiting = active && s.captureSlot == slot
         let isCustom = gestureValue(slot) != nil
-        return Button(action: { s.armTargetCapture(button.id, slot) }) {
-            Text(shownName(slot))
-                .font(.system(size: 12, weight: waiting ? .bold : .medium))
-                .foregroundColor(waiting ? Color.white : (shownName(slot) == "未设置" ? T1Palette.muted : (isCustom ? T1Palette.accent : T1Palette.ink)))
-                .lineLimit(1)
-                .frame(maxWidth: .infinity, minHeight: 28)
+        let targetText = shownName(slot)
+
+        return VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.system(size: 11, weight: .medium))
+                .foregroundColor(T1Palette.muted)
+            Button(action: { s.armTargetCapture(button.id, slot) }) {
+                HStack(spacing: 4) {
+                    if isWaiting {
+                        Circle()
+                            .fill(T1Palette.warmAmber)
+                            .frame(width: 6, height: 6)
+                    } else if isCustom {
+                        Circle()
+                            .fill(T1Palette.accent)
+                            .frame(width: 5, height: 5)
+                    }
+                    Text(targetText)
+                        .font(.system(size: 12, weight: isWaiting ? .bold : (isCustom ? .semibold : .regular)))
+                        .foregroundColor(isWaiting ? Color.white : (isCustom ? T1Palette.accent : (targetText == "未设置" ? T1Palette.muted : T1Palette.ink)))
+                        .lineLimit(1)
+                    Spacer()
+                    if isCustom {
+                        Image(systemName: "pencil")
+                            .font(.system(size: 9))
+                            .foregroundColor(T1Palette.accent.opacity(0.8))
+                    }
+                }
+                .padding(.horizontal, 10)
+                .frame(maxWidth: .infinity, minHeight: 30)
                 .background(
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(waiting ? T1Palette.accent : (isCustom ? T1Palette.accent.opacity(0.12) : T1Palette.surfaceRaised))
+                    RoundedRectangle(cornerRadius: 7)
+                        .fill(isWaiting ? T1Palette.warmAmber : (isCustom ? T1Palette.accentSoft : T1Palette.surfaceRaised))
                 )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 6)
-                        .stroke(waiting ? T1Palette.accent : (isCustom ? T1Palette.accent.opacity(0.4) : Color.clear), lineWidth: waiting ? 1.5 : 1)
+                    RoundedRectangle(cornerRadius: 7)
+                        .stroke(isWaiting ? T1Palette.warmAmber : (isCustom ? T1Palette.accent.opacity(0.4) : Color.clear), lineWidth: 1)
                 )
-        }
-        .buttonStyle(PlainButtonStyle())
-        .contextMenu(ContextMenu(menuItems: {
-            Group {
-                Button(clearTitle) { s.setGesture(id: button.id, slot: slot, target: nil) }
-                Button("鼠标左键") { s.setGesture(id: button.id, slot: slot, target: 1001) }
-                Button("鼠标右键") { s.setGesture(id: button.id, slot: slot, target: 1002) }
-                Divider()
-                Button("回车 (Enter)") { s.setGesture(id: button.id, slot: slot, target: 36) }
-                Button("退格 (Backspace)") { s.setGesture(id: button.id, slot: slot, target: 51) }
-                Button("空格 (Space)") { s.setGesture(id: button.id, slot: slot, target: 49) }
-                Button("Tab") { s.setGesture(id: button.id, slot: slot, target: 48) }
-                Button("Esc") { s.setGesture(id: button.id, slot: slot, target: 53) }
             }
-            Group {
-                Divider()
-                Button("上方向 (↑)") { s.setGesture(id: button.id, slot: slot, target: 126) }
-                Button("下方向 (↓)") { s.setGesture(id: button.id, slot: slot, target: 125) }
-                Button("左方向 (←)") { s.setGesture(id: button.id, slot: slot, target: 123) }
-                Button("右方向 (→)") { s.setGesture(id: button.id, slot: slot, target: 124) }
-                Button("上翻页 (PgUp)") { s.setGesture(id: button.id, slot: slot, target: 116) }
-                Button("下翻页 (PgDn)") { s.setGesture(id: button.id, slot: slot, target: 121) }
-            }
-            Group {
-                Divider()
-                Button("音量+ (Sound Up)") { s.setGesture(id: button.id, slot: slot, target: 2000) }
-                Button("音量− (Sound Down)") { s.setGesture(id: button.id, slot: slot, target: 2001) }
-                Button("静音 (Mute)") { s.setGesture(id: button.id, slot: slot, target: 2007) }
-            }
-        }))
-    }
-
-    private func gestureSlot(_ label: String, slot: Int) -> some View {
-        VStack(spacing: 4) {
-            Text(label)
-                .font(.system(size: 11, weight: .regular))
-                .foregroundColor(T1Palette.muted)
-            slotControl(slot)
+            .buttonStyle(PlainButtonStyle())
+            .contextMenu(ContextMenu(menuItems: {
+                Group {
+                    Button("恢复默认") { s.setGesture(id: button.id, slot: slot, target: nil) }
+                    Divider()
+                    Button("鼠标左键") { s.setGesture(id: button.id, slot: slot, target: 1001) }
+                    Button("鼠标右键") { s.setGesture(id: button.id, slot: slot, target: 1002) }
+                    Button("回车 (Enter)") { s.setGesture(id: button.id, slot: slot, target: 36) }
+                    Button("空格 (Space)") { s.setGesture(id: button.id, slot: slot, target: 49) }
+                    Button("退格 (Backspace)") { s.setGesture(id: button.id, slot: slot, target: 51) }
+                    Button("Tab") { s.setGesture(id: button.id, slot: slot, target: 48) }
+                    Button("Esc") { s.setGesture(id: button.id, slot: slot, target: 53) }
+                }
+                Group {
+                    Divider()
+                    Button("音量+") { s.setGesture(id: button.id, slot: slot, target: 2000) }
+                    Button("音量−") { s.setGesture(id: button.id, slot: slot, target: 2001) }
+                    Button("静音") { s.setGesture(id: button.id, slot: slot, target: 2007) }
+                }
+            }))
         }
         .frame(maxWidth: .infinity)
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 12) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 14) {
+                // Keycap Badge
+                ZStack(alignment: .topTrailing) {
+                    RoundedRectangle(cornerRadius: 10)
                         .fill(T1Palette.surfaceRaised)
-                        .frame(width: 44, height: 44)
-                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(active ? T1Palette.accent : T1Palette.line, lineWidth: active ? 1.5 : 1))
-                    Text(button.title)
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundColor(T1Palette.ink)
+                        .frame(width: 50, height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(active ? T1Palette.warmAmber : (s.selectedBackKeyID == button.id ? T1Palette.accent : T1Palette.line), lineWidth: 1.5)
+                        )
+                    VStack(spacing: 1) {
+                        Spacer()
+                        Text(button.title)
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundColor(T1Palette.ink)
+                        Spacer()
+                    }
+                    .frame(width: 50, height: 50)
+
+                    if !button.fnLegend.isEmpty {
+                        Text(button.fnLegend)
+                            .font(.system(size: 10, weight: .heavy))
+                            .foregroundColor(T1Palette.fnCyan)
+                            .padding(.top, 4)
+                            .padding(.trailing, 6)
+                    }
                 }
 
                 VStack(alignment: .leading, spacing: 3) {
                     HStack(spacing: 8) {
                         Text("当前配置按键：【\(button.title)】")
-                            .font(.system(size: 14, weight: .bold))
+                            .font(.system(size: 15, weight: .bold))
                             .foregroundColor(T1Palette.ink)
                         if !button.fnLegend.isEmpty {
-                            Text("Fn组合: \(button.fnLegend)")
-                                .font(.system(size: 11, weight: .medium))
-                                .foregroundColor(T1Palette.accent)
-                                .padding(.horizontal, 6)
-                                .padding(.vertical, 2)
-                                .background(T1Palette.accent.opacity(0.12))
-                                .clipShape(Capsule())
+                            HStack(spacing: 3) {
+                                Text("Fn 组合:")
+                                    .font(.system(size: 11, weight: .regular))
+                                Text(button.fnLegend)
+                                    .font(.system(size: 11, weight: .bold))
+                            }
+                            .foregroundColor(T1Palette.fnCyan)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(T1Palette.fnCyan.opacity(0.12))
+                            .clipShape(Capsule())
                         }
                         if active {
-                            Text("• 录制中")
-                                .font(.system(size: 11, weight: .bold))
-                                .foregroundColor(Color.orange)
+                            HStack(spacing: 4) {
+                                Circle().fill(T1Palette.warmAmber).frame(width: 6, height: 6)
+                                Text("正在录制目标按键")
+                                    .font(.system(size: 11, weight: .bold))
+                                    .foregroundColor(T1Palette.warmAmber)
+                            }
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(T1Palette.warmAmber.opacity(0.12))
+                            .clipShape(Capsule())
                         }
                     }
-                    Text("直接点击下方槽位改键，或在键盘照片上点选任意按键（也可直接在遥控器实体键上按下）")
+                    Text("直接点击下方槽位改键，或右键槽位快速绑定鼠标与多媒体快捷动作")
                         .font(.system(size: 11, weight: .regular))
                         .foregroundColor(T1Palette.muted)
                 }
@@ -2396,22 +2473,26 @@ private struct BackKeyInspectorCard: View {
                     s.setGesture(id: button.id, slot: 1, target: nil)
                     s.setGesture(id: button.id, slot: 2, target: nil)
                 }) {
-                    Text("恢复本键默认")
-                        .font(.system(size: 11, weight: .medium))
-                        .foregroundColor(T1Palette.muted)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 5)
-                        .background(T1Palette.surface)
-                        .overlay(RoundedRectangle(cornerRadius: 6).stroke(T1Palette.line, lineWidth: 1))
-                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                    HStack(spacing: 4) {
+                        Image(systemName: "arrow.counterclockwise")
+                            .font(.system(size: 10))
+                        Text("恢复本键默认")
+                            .font(.system(size: 11, weight: .medium))
+                    }
+                    .foregroundColor(T1Palette.muted)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(T1Palette.surfaceRaised)
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(T1Palette.line, lineWidth: 1))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
                 }
                 .buttonStyle(PlainButtonStyle())
             }
 
             HStack(spacing: 12) {
-                gestureSlot("单击动作", slot: 0)
-                gestureSlot("双击动作", slot: 1)
-                gestureSlot("长按动作", slot: 2)
+                slotControl("单击动作", slot: 0)
+                slotControl("双击动作", slot: 1)
+                slotControl("长按动作", slot: 2)
             }
         }
         .padding(14)
@@ -2421,18 +2502,221 @@ private struct BackKeyInspectorCard: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(active ? T1Palette.accent : T1Palette.line, lineWidth: active ? 1.5 : 1)
+                .stroke(active ? T1Palette.warmAmber : T1Palette.line, lineWidth: active ? 1.5 : 1)
         )
     }
 }
 
+// MARK: - 拟真全键盘组件 (Chiclet Keyboard)
+private struct ChicletRowView: View {
+    let buttons: [RemoteButton]
+    @ObservedObject var s = gSettings
+
+    private func flexMultiplier(_ id: String) -> CGFloat {
+        switch id {
+        case "space": return 2.6
+        case "caps", "backspace", "shift", "enter": return 1.35
+        case "ctrl", "alt", "altgr", "www": return 1.05
+        default: return 1.0
+        }
+    }
+
+    var body: some View {
+        GeometryReader { geo in
+            let totalSpacing = CGFloat(buttons.count - 1) * 5.0
+            let totalFlex = buttons.reduce(0.0) { $0 + flexMultiplier($1.id) }
+            let unitWidth = max(0, (geo.size.width - totalSpacing) / totalFlex)
+
+            HStack(spacing: 5) {
+                ForEach(buttons) { button in
+                    let w = unitWidth * flexMultiplier(button.id)
+                    ChicletKeycap(
+                        button: button,
+                        width: w,
+                        isSelected: s.selectedBackKeyID == button.id,
+                        isCapturing: s.captureButtonID == button.id,
+                        hasCustomMap: s.buttonMap(button.id)?.single != nil || s.buttonMap(button.id)?.doubleTap != nil || s.buttonMap(button.id)?.hold != nil,
+                        isPressed: isPhysicalPressed(button)
+                    ) {
+                        s.selectedBackKeyID = button.id
+                    }
+                    .frame(width: w)
+                }
+            }
+        }
+        .frame(height: 48)
+    }
+
+    private func isPhysicalPressed(_ button: RemoteButton) -> Bool {
+        guard let last = s.lastInputDisplay, CFAbsoluteTimeGetCurrent() - s.lastInputTime < 0.35 else {
+            return false
+        }
+        return last == button.title || last == button.nativeSingle
+    }
+}
+
+private struct ChicletKeycap: View {
+    let button: RemoteButton
+    let width: CGFloat
+    let isSelected: Bool
+    let isCapturing: Bool
+    let hasCustomMap: Bool
+    let isPressed: Bool
+    let action: () -> Void
+    @ObservedObject var s = gSettings
+
+    private var singleMappedName: String? {
+        guard let map = s.buttonMap(button.id), let code = map.single else { return nil }
+        return KeyCatalog.targetName(code)
+    }
+
+    private var displayTitle: String {
+        switch button.id {
+        case "space": return "SPACE"
+        case "enter": return "ENTER ↵"
+        case "backspace": return "BACK ⌫"
+        case "caps": return "CAPS"
+        case "shift": return "SHIFT ⇧"
+        case "ctrl": return "CTRL"
+        default: return button.title
+        }
+    }
+
+    private var titleSize: CGFloat {
+        if displayTitle.count <= 2 { return 13 }
+        if displayTitle.count <= 4 { return 10 }
+        return 9
+    }
+
+    private var keycapFillGradient: LinearGradient {
+        if isCapturing {
+            return LinearGradient(
+                gradient: Gradient(colors: [T1Palette.warmAmber.opacity(0.4), T1Palette.warmAmber.opacity(0.2)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        } else if isSelected {
+            return LinearGradient(
+                gradient: Gradient(colors: [T1Palette.accent.opacity(0.4), T1Palette.accent.opacity(0.2)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        } else if isPressed {
+            return LinearGradient(
+                gradient: Gradient(colors: [Color(white: 0.12), Color(white: 0.08)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        } else {
+            return LinearGradient(
+                gradient: Gradient(colors: [Color(white: 0.22), Color(white: 0.14)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        }
+    }
+
+    var body: some View {
+        Button(action: action) {
+            ZStack(alignment: .topTrailing) {
+                VStack(spacing: 0) {
+                    HStack(alignment: .top, spacing: 2) {
+                        Text(displayTitle)
+                            .font(.system(size: titleSize, weight: .bold))
+                            .foregroundColor(isSelected ? T1Palette.accent : T1Palette.ink)
+                            .lineLimit(1)
+                        Spacer(minLength: 0)
+                        if !button.fnLegend.isEmpty {
+                            Text(button.fnLegend)
+                                .font(.system(size: 9, weight: .heavy))
+                                .foregroundColor(T1Palette.fnCyan)
+                                .lineLimit(1)
+                        }
+                    }
+                    .padding(.top, 4)
+                    .padding(.horizontal, 4)
+
+                    Spacer(minLength: 0)
+
+                    HStack(spacing: 2) {
+                        if let target = singleMappedName {
+                            Text(target)
+                                .font(.system(size: 8, weight: .semibold))
+                                .foregroundColor(T1Palette.accent)
+                                .lineLimit(1)
+                        }
+                        Spacer(minLength: 0)
+                        if hasCustomMap {
+                            Circle()
+                                .fill(T1Palette.emerald)
+                                .frame(width: 5, height: 5)
+                                .shadow(color: T1Palette.emerald.opacity(0.8), radius: 2)
+                        }
+                    }
+                    .padding(.bottom, 3)
+                    .padding(.horizontal, 4)
+                }
+                .frame(width: width, height: 48)
+                .background(
+                    RoundedRectangle(cornerRadius: 7)
+                        .fill(keycapFillGradient)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 7))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 7)
+                        .stroke(
+                            isCapturing ? T1Palette.warmAmber :
+                            (isSelected ? T1Palette.accent :
+                            (hasCustomMap ? T1Palette.emerald.opacity(0.8) : Color.white.opacity(0.12))),
+                            lineWidth: (isCapturing || isSelected) ? 1.5 : 1
+                        )
+                )
+                .shadow(
+                    color: Color.black.opacity(isPressed ? 0.08 : 0.40),
+                    radius: isPressed ? 1 : 2.5,
+                    x: 0,
+                    y: isPressed ? 0.5 : 1.5
+                )
+                .scaleEffect(isPressed ? 0.94 : (isSelected ? 1.02 : 1.0))
+                .animation(.spring(response: 0.2, dampingFraction: 0.7), value: isPressed)
+                .animation(.easeInOut(duration: 0.12), value: isSelected)
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel(button.title)
+        .contextMenu(ContextMenu(menuItems: {
+            Group {
+                Button("选中按键: \(button.title)") { s.selectedBackKeyID = button.id }
+                Divider()
+                Button("恢复默认") {
+                    s.setGesture(id: button.id, slot: 0, target: nil)
+                    s.setGesture(id: button.id, slot: 1, target: nil)
+                    s.setGesture(id: button.id, slot: 2, target: nil)
+                }
+                Button("单击 ➔ 鼠标左键") { s.setGesture(id: button.id, slot: 0, target: 1001) }
+                Button("单击 ➔ 鼠标右键") { s.setGesture(id: button.id, slot: 0, target: 1002) }
+                Button("单击 ➔ 回车 (Enter)") { s.setGesture(id: button.id, slot: 0, target: 36) }
+                Button("单击 ➔ 空格 (Space)") { s.setGesture(id: button.id, slot: 0, target: 49) }
+                Button("单击 ➔ 退格 (Backspace)") { s.setGesture(id: button.id, slot: 0, target: 51) }
+                Button("单击 ➔ Esc") { s.setGesture(id: button.id, slot: 0, target: 53) }
+            }
+            Group {
+                Divider()
+                Button("单击 ➔ 音量+") { s.setGesture(id: button.id, slot: 0, target: 2000) }
+                Button("单击 ➔ 音量−") { s.setGesture(id: button.id, slot: 0, target: 2001) }
+            }
+        }))
+    }
+}
+
+// MARK: - 背面主面板容器 (KeyboardBoard)
 private struct KeyboardBoard: View {
     @ObservedObject var s = gSettings
+    @State private var viewMode: Int = 0 // 0: 拟真全键盘 (推荐), 1: 实物测绘图
 
     private var photoW: CGFloat { 840 }
     private var photoH: CGFloat { photoW * 230 / 673 }
 
-    // 素材已转成横版：原图上方落到左边，原图右侧落到上边。
     private func landscapeX(_ button: RemoteButton) -> CGFloat { button.anchorY }
     private func landscapeY(_ button: RemoteButton) -> CGFloat { 1 - button.anchorX }
 
@@ -2442,91 +2726,183 @@ private struct KeyboardBoard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            // 1. 顶部按键映射控制中枢（直观醒目，点击即可改键）
+            // 1. 顶部按键映射中枢控制卡片
             BackKeyInspectorCard(button: selectedButton, active: s.captureButtonID == selectedButton.id)
 
-            // 2. 遥控器实物背部键盘高清图（点击/右键任意键帽直接改键）
-            ZStack(alignment: .topLeading) {
-                RemotePhoto(name: "remote-back.png", height: photoH)
-                    .frame(width: photoW, height: photoH)
-                GeometryReader { geo in
-                    ForEach(RemoteCatalog.back) { button in
-                        KeyHotspot(
-                            title: button.title,
-                            selected: s.selectedBackKeyID == button.id,
-                            isCapturing: s.captureButtonID == button.id,
-                            hasCustomMap: s.buttonMap(button.id)?.single != nil || s.buttonMap(button.id)?.doubleTap != nil || s.buttonMap(button.id)?.hold != nil,
-                            width: 46,
-                            height: 34,
-                            buttonID: button.id
-                        ) {
-                            s.selectedBackKeyID = button.id
+            // 2. 键盘视图模式切换
+            HStack(spacing: 12) {
+                HStack(spacing: 6) {
+                    Image(systemName: "keyboard")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(T1Palette.accent)
+                    Text("背面全键盘矩阵 (45 颗物理按键)")
+                        .font(.system(size: 13, weight: .bold))
+                        .foregroundColor(T1Palette.ink)
+                }
+                Spacer()
+                HStack(spacing: 2) {
+                    modeButton("拟真全键盘", icon: "keyboard.fill", mode: 0)
+                    modeButton("实物测绘图", icon: "photo", mode: 1)
+                }
+                .padding(2)
+                .background(T1Palette.surfaceRaised)
+                .clipShape(RoundedRectangle(cornerRadius: 7))
+                .overlay(RoundedRectangle(cornerRadius: 7).stroke(T1Palette.line, lineWidth: 1))
+            }
+
+            // 3. 拟真键盘 Deck 或实物测绘图
+            if viewMode == 0 {
+                VStack(spacing: 5) {
+                    ChicletRowView(buttons: RemoteCatalog.columnEsc)
+                    ChicletRowView(buttons: RemoteCatalog.columnCaps)
+                    ChicletRowView(buttons: RemoteCatalog.columnShift)
+                    ChicletRowView(buttons: RemoteCatalog.columnCtrl)
+                }
+                .padding(12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(T1Palette.surfaceRaised.opacity(0.7))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(T1Palette.line, lineWidth: 1)
+                )
+            } else {
+                ZStack(alignment: .topLeading) {
+                    RemotePhoto(name: "remote-back.png", height: photoH)
+                        .frame(width: photoW, height: photoH)
+                    GeometryReader { geo in
+                        ForEach(RemoteCatalog.back) { button in
+                            KeyHotspot(
+                                title: button.title,
+                                selected: s.selectedBackKeyID == button.id,
+                                isCapturing: s.captureButtonID == button.id,
+                                hasCustomMap: s.buttonMap(button.id)?.single != nil || s.buttonMap(button.id)?.doubleTap != nil || s.buttonMap(button.id)?.hold != nil,
+                                width: 46,
+                                height: 34,
+                                buttonID: button.id
+                            ) {
+                                s.selectedBackKeyID = button.id
+                            }
+                            .position(
+                                x: landscapeX(button) * geo.size.width,
+                                y: landscapeY(button) * geo.size.height
+                            )
                         }
-                        .position(
-                            x: landscapeX(button) * geo.size.width,
-                            y: landscapeY(button) * geo.size.height
-                        )
                     }
+                    .frame(width: photoW, height: photoH)
                 }
                 .frame(width: photoW, height: photoH)
-            }
-            .frame(width: photoW, height: photoH)
-
-            // 3. 全键盘矩阵 4 行快捷按钮
-            VStack(alignment: .leading, spacing: 4) {
-                keyRow(RemoteCatalog.columnEsc)
-                keyRow(RemoteCatalog.columnCaps)
-                keyRow(RemoteCatalog.columnShift)
-                keyRow(RemoteCatalog.columnCtrl)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(T1Palette.line, lineWidth: 1))
             }
         }
     }
 
-    private func keyRow(_ buttons: [RemoteButton]) -> some View {
-        HStack(spacing: 4) {
-            ForEach(buttons) { button in
-                KeyChip(button: button, selected: s.selectedBackKeyID == button.id, compact: true) {
-                    s.selectedBackKeyID = button.id
-                }
+    private func modeButton(_ title: String, icon: String, mode: Int) -> some View {
+        Button(action: { viewMode = mode }) {
+            HStack(spacing: 4) {
+                Image(systemName: icon)
+                    .font(.system(size: 11))
+                Text(title)
+                    .font(.system(size: 11, weight: .medium))
             }
+            .foregroundColor(viewMode == mode ? T1Palette.inkInverse : T1Palette.ink)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .background(viewMode == mode ? T1Palette.fillInverse : Color.clear)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
         }
-        .frame(width: photoW, alignment: .leading)
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
+// MARK: - 照片热点指示器 (KeyHotspot - 拟真发光 HUD 准星)
 private struct KeyHotspot: View {
     let title: String
     let selected: Bool
     var isCapturing: Bool = false
     var hasCustomMap: Bool = false
-    var width: CGFloat = 36
-    var height: CGFloat = 36
+    var width: CGFloat = 34
+    var height: CGFloat = 34
     var buttonID: String? = nil
     let action: () -> Void
     @ObservedObject var s = gSettings
 
+    private var symbolText: String {
+        guard let id = buttonID else { return "" }
+        switch id {
+        case "up": return "↑"
+        case "down": return "↓"
+        case "left": return "←"
+        case "right": return "→"
+        case "ok": return "OK"
+        case "power": return "⏻"
+        case "back": return "↩"
+        case "voice": return "🎙"
+        case "mute": return "🔈"
+        case "home": return "⌂"
+        case "pointer": return "🖱"
+        case "menu": return "☰"
+        case "volup": return "+"
+        case "voldown": return "−"
+        default: return ""
+        }
+    }
+
     var body: some View {
         Button(action: action) {
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.001))
-                if isCapturing {
-                    Circle()
-                        .stroke(Color.orange, lineWidth: 2)
-                        .background(Circle().fill(Color.orange.opacity(0.20)))
-                        .frame(width: min(width, height) * 0.95, height: min(width, height) * 0.95)
-                } else if selected {
-                    Circle()
-                        .stroke(T1Palette.accent, lineWidth: 2)
-                        .background(Circle().fill(T1Palette.accent.opacity(0.16)))
-                        .frame(width: min(width, height) * 0.78, height: min(width, height) * 0.78)
-                }
+                // 1. 外发光 HUD 环形圈
                 Circle()
-                    .fill(isCapturing ? Color.orange : (hasCustomMap ? Color.green : T1Palette.accent))
-                    .frame(width: (selected || isCapturing) ? 7 : 5, height: (selected || isCapturing) ? 7 : 5)
+                    .stroke(
+                        isCapturing ? T1Palette.warmAmber :
+                        (selected ? T1Palette.fnCyan : Color.white.opacity(0.35)),
+                        lineWidth: (selected || isCapturing) ? 2.5 : 1.2
+                    )
+                    .background(
+                        Circle().fill(
+                            isCapturing ? T1Palette.warmAmber.opacity(0.35) :
+                            (selected ? T1Palette.accent.opacity(0.30) : Color.black.opacity(0.48))
+                        )
+                    )
+                    .shadow(
+                        color: isCapturing ? T1Palette.warmAmber.opacity(0.9) :
+                        (selected ? T1Palette.fnCyan.opacity(0.9) : Color.black.opacity(0.3)),
+                        radius: (selected || isCapturing) ? 8 : 2
+                    )
+                    .frame(width: width, height: height)
+
+                // 2. 居中微型按键图示文字
+                if !symbolText.isEmpty {
+                    Text(symbolText)
+                        .font(.system(size: symbolText == "OK" ? 10 : 12, weight: .bold))
+                        .foregroundColor(
+                            isCapturing ? T1Palette.warmAmber :
+                            (selected ? Color.white : Color.white.opacity(0.92))
+                        )
+                }
+
+                // 3. 自定义映射成功翡翠绿指示灯
+                if hasCustomMap {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Circle()
+                                .fill(T1Palette.emerald)
+                                .frame(width: 6, height: 6)
+                                .shadow(color: T1Palette.emerald, radius: 2)
+                        }
+                        Spacer()
+                    }
+                    .frame(width: width + 2, height: height + 2)
+                }
             }
             .frame(width: width, height: height)
-            .contentShape(RoundedRectangle(cornerRadius: 8))
+            .scaleEffect((selected || isCapturing) ? 1.15 : 1.0)
+            .animation(.spring(response: 0.22, dampingFraction: 0.7), value: selected)
+            .animation(.spring(response: 0.22, dampingFraction: 0.7), value: isCapturing)
+            .contentShape(Circle())
         }
         .buttonStyle(PlainButtonStyle())
         .accessibilityLabel(title)
@@ -2550,104 +2926,98 @@ private struct KeyHotspot: View {
     }
 }
 
+// MARK: - 正面按键舞台 (MapStage)
 private struct MapStage: View {
     let buttons: [RemoteButton]
     let imageName: String
-    @State private var selectedID: String? = nil
+    @State private var focusedButtonID: String? = nil
     @ObservedObject var s = gSettings
 
-    private var cardH: CGFloat { 76 }
-    private var gap: CGFloat { 8 }
+    private var cardH: CGFloat { 74 }
+    private var gap: CGFloat { 6 }
     private var photoH: CGFloat { 540 }
 
     private var left: [RemoteButton] { buttons.filter { $0.side == 0 } }
     private var right: [RemoteButton] { buttons.filter { $0.side == 1 } }
 
-    private func stackHeight(_ count: Int) -> CGFloat {
-        if count == 0 { return 0 }
-        return CGFloat(count) * cardH + CGFloat(count - 1) * gap
-    }
-
-    private var stageH: CGFloat {
-        max(photoH, stackHeight(left.count), stackHeight(right.count))
-    }
-
     var body: some View {
         GeometryReader { geo in
-            arranged(in: geo.size)
-        }
-        .frame(height: stageH)
-    }
+            let photoW = photoH * 225.0 / 662.0
+            let availableW = geo.size.width
+            let cardW = min(260, max(210, (availableW - photoW - 64) / 2))
 
-    private func centers(count: Int) -> [CGFloat] {
-        if count == 0 { return [] }
-        let stack = stackHeight(count)
-        let top = (stageH - stack) / 2
-        var result: [CGFloat] = []
-        for index in 0..<count {
-            result.append(top + cardH / 2 + CGFloat(index) * (cardH + gap))
-        }
-        return result
-    }
-
-    private func arranged(in size: CGSize) -> some View {
-        let photoW = photoH * 225.0 / 662.0
-        let cardW = max(200, (size.width - photoW - 32) / 2)
-        let photoX = (size.width - photoW) / 2
-        let photoY = (stageH - photoH) / 2
-        let leftYs = centers(count: left.count)
-        let rightYs = centers(count: right.count)
-        return ZStack(alignment: .topLeading) {
-            RemotePhoto(name: imageName, height: photoH)
-                .frame(width: photoW, height: photoH)
-                .position(x: photoX + photoW / 2, y: photoY + photoH / 2)
-            leads(leftYs: leftYs, rightYs: rightYs, photoX: photoX, photoY: photoY, photoW: photoW, cardW: cardW, width: size.width)
-                .frame(width: size.width, height: stageH)
-            ForEach(buttons) { button in
-                KeyHotspot(
-                    title: button.title,
-                    selected: selectedID == button.id,
-                    isCapturing: s.captureButtonID == button.id,
-                    width: 34,
-                    height: 34
-                ) {
-                    selectedID = button.id
+            HStack(alignment: .center, spacing: 16) {
+                // 左侧 7 颗按键卡片
+                VStack(spacing: gap) {
+                    ForEach(left) { button in
+                        MapCard(
+                            button: button,
+                            active: s.captureButtonID == button.id,
+                            selected: (focusedButtonID == button.id) || (s.captureButtonID == button.id),
+                            width: cardW
+                        )
+                        .onTapGesture {
+                            focusedButtonID = button.id
+                        }
+                    }
                 }
-                .position(x: photoX + button.anchorX * photoW, y: photoY + button.anchorY * photoH)
-            }
-            ForEach(Array(left.enumerated()), id: \.element.id) { item in
-                MapCard(button: item.element, active: s.captureButtonID == item.element.id, selected: selectedID == item.element.id, width: cardW)
-                    .position(x: cardW / 2, y: leftYs[item.offset])
-            }
-            ForEach(Array(right.enumerated()), id: \.element.id) { item in
-                MapCard(button: item.element, active: s.captureButtonID == item.element.id, selected: selectedID == item.element.id, width: cardW)
-                    .position(x: size.width - cardW / 2, y: rightYs[item.offset])
-            }
-        }
-        .frame(width: size.width, height: stageH)
-    }
+                .frame(width: cardW)
 
-    private func leads(leftYs: [CGFloat], rightYs: [CGFloat], photoX: CGFloat, photoY: CGFloat, photoW: CGFloat, cardW: CGFloat, width: CGFloat) -> some View {
-        Path { path in
-            stroke(path: &path, buttons: left, ys: leftYs, fromX: cardW, photoX: photoX, photoY: photoY, photoW: photoW)
-            stroke(path: &path, buttons: right, ys: rightYs, fromX: width - cardW, photoX: photoX, photoY: photoY, photoW: photoW)
-        }
-        .stroke(T1Palette.line, style: StrokeStyle(lineWidth: 1, lineCap: .round, lineJoin: .round))
-    }
+                Spacer(minLength: 0)
 
-    private func stroke(path: inout Path, buttons: [RemoteButton], ys: [CGFloat], fromX: CGFloat, photoX: CGFloat, photoY: CGFloat, photoW: CGFloat) {
-        for index in 0..<buttons.count {
-            let button = buttons[index]
-            let target = CGPoint(x: photoX + button.anchorX * photoW, y: photoY + button.anchorY * photoH)
-            let origin = CGPoint(x: fromX, y: ys[index])
-            let gutterX = button.side == 0 ? photoX - 8 : photoX + photoW + 8
-            path.move(to: origin)
-            path.addLine(to: CGPoint(x: gutterX, y: origin.y))
-            path.addLine(to: CGPoint(x: gutterX, y: target.y))
-            path.addLine(to: target)
-        }
-    }
+                // 中间遥控器照片与拟真光晕 HUD
+                ZStack {
+                    RemotePhoto(name: imageName, height: photoH)
+                        .frame(width: photoW, height: photoH)
+                        .shadow(color: Color.black.opacity(0.60), radius: 18, x: 0, y: 8)
 
+                    ForEach(buttons) { button in
+                        KeyHotspot(
+                            title: button.title,
+                            selected: (focusedButtonID == button.id) || (s.captureButtonID == button.id),
+                            isCapturing: s.captureButtonID == button.id,
+                            hasCustomMap: s.buttonMap(button.id)?.single != nil || s.buttonMap(button.id)?.doubleTap != nil || s.buttonMap(button.id)?.hold != nil,
+                            width: 30,
+                            height: 30,
+                            buttonID: button.id
+                        ) {
+                            focusedButtonID = button.id
+                        }
+                        .position(x: button.anchorX * photoW, y: button.anchorY * photoH)
+                    }
+                }
+                .frame(width: photoW, height: photoH)
+                .background(
+                    RadialGradient(
+                        gradient: Gradient(colors: [T1Palette.accent.opacity(0.18), Color.clear]),
+                        center: .center,
+                        startRadius: 20,
+                        endRadius: 240
+                    )
+                )
+
+                Spacer(minLength: 0)
+
+                // 右侧 7 颗按键卡片
+                VStack(spacing: gap) {
+                    ForEach(right) { button in
+                        MapCard(
+                            button: button,
+                            active: s.captureButtonID == button.id,
+                            selected: (focusedButtonID == button.id) || (s.captureButtonID == button.id),
+                            width: cardW
+                        )
+                        .onTapGesture {
+                            focusedButtonID = button.id
+                        }
+                    }
+                }
+                .frame(width: cardW)
+            }
+            .frame(width: availableW, height: photoH, alignment: .center)
+        }
+        .frame(height: photoH + 20)
+    }
 }
 
 private struct Hairline: View {
@@ -2672,8 +3042,15 @@ private struct PanelCard<Content: View>: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 12).fill(T1Palette.surface))
-        .overlay(RoundedRectangle(cornerRadius: 12).stroke(T1Palette.line, lineWidth: 1))
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(T1Palette.surface)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 14)
+                .stroke(T1Palette.line, lineWidth: 1)
+        )
+        .shadow(color: Color.black.opacity(0.03), radius: 6, x: 0, y: 2)
     }
 }
 
@@ -2682,45 +3059,59 @@ private struct PresetCard: View {
     let selected: Bool
     let action: () -> Void
 
+    private var iconName: String {
+        switch preset {
+        case .heavySmooth: return "waveform.path"
+        case .balanced: return "sparkles"
+        case .responsive: return "scope"
+        case .native: return "bolt.slash"
+        }
+    }
+
     var body: some View {
         Button(action: action) {
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 8) {
-                    Text(preset.title)
+                    Image(systemName: iconName)
                         .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(selected ? T1Palette.accent : T1Palette.muted)
+                    Text(preset.title)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundColor(selected ? T1Palette.accent : T1Palette.ink)
                     Spacer(minLength: 8)
                     if selected {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 12, weight: .medium))
-                            .accessibilityHidden(true)
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 15))
+                            .foregroundColor(T1Palette.accent)
                     }
                 }
-                Text(selected ? "选用" : preset.detail)
+                Text(preset.detail)
                     .font(.system(size: 12, weight: .regular))
-                    .foregroundColor(selected ? T1Palette.inkInverse : T1Palette.muted)
+                    .foregroundColor(T1Palette.muted)
                     .lineLimit(2)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, minHeight: 84, alignment: .topLeading)
-            .foregroundColor(selected ? T1Palette.inkInverse : T1Palette.ink)
-            .background(RoundedRectangle(cornerRadius: 12).fill(selected ? T1Palette.fillInverse : T1Palette.surface))
+            .padding(14)
+            .frame(maxWidth: .infinity, minHeight: 82, alignment: .topLeading)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(selected ? T1Palette.accentSoft : T1Palette.surface)
+            )
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(selected ? T1Palette.fillInverse : T1Palette.line, lineWidth: 1)
+                    .stroke(selected ? T1Palette.accent : T1Palette.line, lineWidth: selected ? 1.5 : 1)
             )
-            .contentShape(RoundedRectangle(cornerRadius: 12))
+            .shadow(color: Color.black.opacity(selected ? 0.05 : 0.02), radius: selected ? 4 : 2, x: 0, y: 1)
         }
         .buttonStyle(PlainButtonStyle())
         .accessibilityLabel(preset.title)
         .accessibilityValue(selected ? "已选用" : preset.detail)
-        .accessibilityAddTraits(selected ? .isSelected : [])
     }
 }
 
 private struct ParamSlider: View {
     let title: String
-    let valueText: String
+    let value: String
     let hint: String
     @Binding var amount: Double
     let range: ClosedRange<Double>
@@ -2728,7 +3119,7 @@ private struct ParamSlider: View {
 
     init(title: String, value: String, hint: String, amount: Binding<Double>, range: ClosedRange<Double>, step: Double) {
         self.title = title
-        self.valueText = value
+        self.value = value
         self.hint = hint
         self._amount = amount
         self.range = range
@@ -2736,21 +3127,25 @@ private struct ParamSlider: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(alignment: .center, spacing: 12) {
                 Text(title)
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(T1Palette.ink)
                 Spacer(minLength: 12)
-                Text(valueText)
-                    .font(.system(size: 14, weight: .medium, design: .monospaced))
-                    .foregroundColor(T1Palette.ink)
+                Text(value)
+                    .font(.system(size: 12, weight: .bold, design: .monospaced))
+                    .foregroundColor(T1Palette.accent)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 2)
+                    .background(T1Palette.surfaceRaised)
+                    .clipShape(Capsule())
+                    .overlay(Capsule().stroke(T1Palette.line, lineWidth: 1))
             }
             Slider(value: $amount, in: range, step: step)
-                .accentColor(T1Palette.ink)
-                .accessibilityLabel(title)
+                .accentColor(T1Palette.accent)
             Text(hint)
-                .font(.system(size: 12, weight: .regular))
+                .font(.system(size: 11, weight: .regular))
                 .foregroundColor(T1Palette.muted)
         }
     }
@@ -2762,13 +3157,20 @@ private struct MeterBar: View {
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
-                Capsule().fill(T1Palette.line)
                 Capsule()
-                    .fill(T1Palette.accent)
+                    .fill(T1Palette.surfaceRaised)
+                Capsule()
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [T1Palette.accent, T1Palette.fnCyan]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
                     .frame(width: geo.size.width * CGFloat(max(0, min(1, ratio))))
             }
         }
-        .frame(height: 4)
+        .frame(height: 6)
         .accessibilityLabel("吸收率")
         .accessibilityValue("\(Int((ratio * 100).rounded()))%")
     }
@@ -2807,16 +3209,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.isReleasedWhenClosed = false
         window.center()
         window.title = "T1"
+        window.appearance = NSAppearance(named: .darkAqua)
         window.titlebarAppearsTransparent = true
         window.titleVisibility = .hidden
         window.titlebarSeparatorStyle = .none
         window.isMovableByWindowBackground = true
-        window.backgroundColor = NSColor(name: nil, dynamicProvider: { appearance in
-            appearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
-                ? NSColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
-                : NSColor(srgbRed: 0.965, green: 0.965, blue: 0.957, alpha: 1)
-        })
-        window.contentMinSize = NSSize(width: 920, height: 680)
+        window.isOpaque = false
+        window.backgroundColor = .clear
+        window.contentMinSize = NSSize(width: 940, height: 700)
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
