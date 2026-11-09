@@ -1056,22 +1056,11 @@ func hardwareFilteredCallback(
     let isFromT1 = isT1Sender(senderID)
 
     // ────────────────────────────────────────────────────────
-    // 🛡️ 非 T1 硬件事件安全处理：
+    // 🛡️ 严格硬件隔离：任何非 T1 硬件事件（MacBook 触控板、文本拖拽、外接鼠标、系统合成事件）
+    // 100% 原生纯净直通放行，绝对不修改任何坐标、不拦截、不清零 Delta！
     // ────────────────────────────────────────────────────────
     if !isFromT1 {
-        if senderID == 0 {
-            // 🛡️ 核心防御：针对 AppKit / WindowServer 光标形态切换（文本I-Beam、小手、超链接Hover）
-            // 绝不允许 senderID==0 的合成事件携带陈旧坐标瞬移光标！
-            // 强制将事件坐标锚定在当前屏幕光标真实物理位置，且清零位移增量。
-            let cur = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
-            event.location = cur
-            clearPointerDelta(event)
-            return Unmanaged.passRetained(event)
-        }
-        // 物理外设动作（如 MacBook 自带触控板）：重置平滑引擎并无缝交还控制权
-        let raw = eventDelta(event, ioEvent)
-        let moved = hypot(raw.0, raw.1)
-        if moved >= 0.5 {
+        if senderID != 0 {
             gVirtualPos = nil
             gCore.resetMotion()
         }
@@ -1107,8 +1096,6 @@ func hardwareFilteredCallback(
         if down {
             gCore.notifyClick()
         }
-        let cur = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
-        event.location = cur
         clearPointerDelta(event)
         return Unmanaged.passRetained(event)
     }
@@ -1135,7 +1122,7 @@ func hardwareFilteredCallback(
     }
 
     // 锚定于当前屏幕物理光标真实位置，严防开环漂移
-    let current = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
+    let current = event.location
     let next = clampToScreens(CGPoint(x: current.x + CGFloat(sdx), y: current.y + CGFloat(sdy)))
     gVirtualPos = next
 
