@@ -46,25 +46,25 @@ struct ButtonMap: Codable, Identifiable, Equatable {
 
 enum RemoteCatalog {
     // 正面 14 颗按键：圆盘上、左、确认、下，返回、静音、飞鼠；电源、音量+、音量-、右、语音、主页、菜单
-    // 左右各 7 颗对称排布，双侧键独立识别（音量加 / 音量减），坐标精准对齐 remote-front.png（225x662 像素级测绘）
+    // 左右各 7 颗对称排布，双侧键独立识别（音量加 / 音量减），坐标像素级几何测绘对齐 remote-front.png（225x662）
     static let front: [RemoteButton] = [
         // 顶部与侧边（右侧 7 颗）
-        RemoteButton(id: "power", title: "电源", symbol: "power", side: 1, anchorX: 0.7822, anchorY: 0.0846, nativeSingle: "电源", fnLegend: ""),
-        RemoteButton(id: "volup", title: "音量+", symbol: "speaker.plus", side: 1, anchorX: 0.9650, anchorY: 0.2054, nativeSingle: "音量+", fnLegend: ""),
-        RemoteButton(id: "voldown", title: "音量−", symbol: "speaker.minus", side: 1, anchorX: 0.9650, anchorY: 0.2719, nativeSingle: "音量−", fnLegend: ""),
-        RemoteButton(id: "right", title: "右", symbol: "chevron.right", side: 1, anchorX: 0.7644, anchorY: 0.2372, nativeSingle: "右", fnLegend: ""),
-        RemoteButton(id: "voice", title: "语音", symbol: "mic", side: 1, anchorX: 0.7022, anchorY: 0.4003, nativeSingle: "语音", fnLegend: ""),
-        RemoteButton(id: "home", title: "主页", symbol: "house", side: 1, anchorX: 0.7022, anchorY: 0.5211, nativeSingle: "主页", fnLegend: ""),
-        RemoteButton(id: "menu", title: "菜单", symbol: "line.3.horizontal", side: 1, anchorX: 0.7022, anchorY: 0.6375, nativeSingle: "菜单", fnLegend: ""),
+        RemoteButton(id: "power", title: "电源", symbol: "power", side: 1, anchorX: 0.7822, anchorY: 0.0665, nativeSingle: "电源", fnLegend: ""),
+        RemoteButton(id: "volup", title: "音量+", symbol: "speaker.plus", side: 1, anchorX: 0.9689, anchorY: 0.2039, nativeSingle: "音量+", fnLegend: ""),
+        RemoteButton(id: "voldown", title: "音量−", symbol: "speaker.minus", side: 1, anchorX: 0.9689, anchorY: 0.2644, nativeSingle: "音量−", fnLegend: ""),
+        RemoteButton(id: "right", title: "右", symbol: "chevron.right", side: 1, anchorX: 0.7511, anchorY: 0.2115, nativeSingle: "右", fnLegend: ""),
+        RemoteButton(id: "voice", title: "语音", symbol: "mic", side: 1, anchorX: 0.7111, anchorY: 0.3927, nativeSingle: "语音", fnLegend: ""),
+        RemoteButton(id: "home", title: "主页", symbol: "house", side: 1, anchorX: 0.7111, anchorY: 0.5136, nativeSingle: "主页", fnLegend: ""),
+        RemoteButton(id: "menu", title: "菜单", symbol: "line.3.horizontal", side: 1, anchorX: 0.7111, anchorY: 0.6344, nativeSingle: "菜单", fnLegend: ""),
 
         // 导航圆盘与左侧（左侧 7 颗）
-        RemoteButton(id: "up", title: "上", symbol: "chevron.up", side: 0, anchorX: 0.4978, anchorY: 0.1782, nativeSingle: "上", fnLegend: ""),
-        RemoteButton(id: "left", title: "左", symbol: "chevron.left", side: 0, anchorX: 0.2311, anchorY: 0.2372, nativeSingle: "左", fnLegend: ""),
-        RemoteButton(id: "ok", title: "确认", symbol: "circle", side: 0, anchorX: 0.4978, anchorY: 0.2372, nativeSingle: "左键", fnLegend: ""),
-        RemoteButton(id: "down", title: "下", symbol: "chevron.down", side: 0, anchorX: 0.4978, anchorY: 0.2961, nativeSingle: "下", fnLegend: ""),
-        RemoteButton(id: "back", title: "返回", symbol: "arrow.left", side: 0, anchorX: 0.2889, anchorY: 0.4003, nativeSingle: "返回", fnLegend: ""),
-        RemoteButton(id: "mute", title: "静音", symbol: "speaker.slash", side: 0, anchorX: 0.2889, anchorY: 0.5211, nativeSingle: "静音", fnLegend: ""),
-        RemoteButton(id: "pointer", title: "飞鼠", symbol: "hand.raised", side: 0, anchorX: 0.2889, anchorY: 0.6375, nativeSingle: "切换飞鼠", fnLegend: "")
+        RemoteButton(id: "up", title: "上", symbol: "chevron.up", side: 0, anchorX: 0.5000, anchorY: 0.1261, nativeSingle: "上", fnLegend: ""),
+        RemoteButton(id: "left", title: "左", symbol: "chevron.left", side: 0, anchorX: 0.2489, anchorY: 0.2115, nativeSingle: "左", fnLegend: ""),
+        RemoteButton(id: "ok", title: "确认", symbol: "circle", side: 0, anchorX: 0.5000, anchorY: 0.2115, nativeSingle: "左键", fnLegend: ""),
+        RemoteButton(id: "down", title: "下", symbol: "chevron.down", side: 0, anchorX: 0.5000, anchorY: 0.2968, nativeSingle: "下", fnLegend: ""),
+        RemoteButton(id: "back", title: "返回", symbol: "arrow.left", side: 0, anchorX: 0.2889, anchorY: 0.3927, nativeSingle: "返回", fnLegend: ""),
+        RemoteButton(id: "mute", title: "静音", symbol: "speaker.slash", side: 0, anchorX: 0.2889, anchorY: 0.5136, nativeSingle: "静音", fnLegend: ""),
+        RemoteButton(id: "pointer", title: "飞鼠", symbol: "hand.raised", side: 0, anchorX: 0.2889, anchorY: 0.6344, nativeSingle: "切换飞鼠", fnLegend: "")
     ]
 
     // 背面键位：坐标已精确对齐 remote-back.png（673x230 像素级测绘，45 颗物理按键几何质心对齐）
@@ -2817,95 +2817,78 @@ private struct KeyboardBoard: View {
     }
 }
 
-// MARK: - 照片热点指示器 (KeyHotspot - 拟真发光 HUD 准星)
+// MARK: - 照片交互触控点 (KeyHotspot - 极简拟真交互指示点)
 private struct KeyHotspot: View {
     let title: String
     let selected: Bool
     var isCapturing: Bool = false
     var hasCustomMap: Bool = false
-    var width: CGFloat = 34
-    var height: CGFloat = 34
+    var width: CGFloat = 32
+    var height: CGFloat = 32
     var buttonID: String? = nil
     let action: () -> Void
     @ObservedObject var s = gSettings
-
-    private var symbolText: String {
-        guard let id = buttonID else { return "" }
-        switch id {
-        case "up": return "↑"
-        case "down": return "↓"
-        case "left": return "←"
-        case "right": return "→"
-        case "ok": return "OK"
-        case "power": return "⏻"
-        case "back": return "↩"
-        case "voice": return "🎙"
-        case "mute": return "🔈"
-        case "home": return "⌂"
-        case "pointer": return "🖱"
-        case "menu": return "☰"
-        case "volup": return "+"
-        case "voldown": return "−"
-        default: return ""
-        }
-    }
+    @State private var isHovered: Bool = false
 
     var body: some View {
         Button(action: action) {
             ZStack {
-                // 1. 外发光 HUD 环形圈
-                Circle()
-                    .stroke(
-                        isCapturing ? T1Palette.warmAmber :
-                        (selected ? T1Palette.fnCyan : Color.white.opacity(0.35)),
-                        lineWidth: (selected || isCapturing) ? 2.5 : 1.2
-                    )
-                    .background(
-                        Circle().fill(
-                            isCapturing ? T1Palette.warmAmber.opacity(0.35) :
-                            (selected ? T1Palette.accent.opacity(0.30) : Color.black.opacity(0.48))
+                // 1. 状态外光环
+                if isCapturing {
+                    Circle()
+                        .stroke(T1Palette.warmAmber, lineWidth: 2)
+                        .background(Circle().fill(T1Palette.warmAmber.opacity(0.28)))
+                        .frame(width: 24, height: 24)
+                        .shadow(color: T1Palette.warmAmber.opacity(0.9), radius: 6)
+                } else if selected {
+                    Circle()
+                        .stroke(T1Palette.fnCyan, lineWidth: 2)
+                        .background(Circle().fill(T1Palette.accent.opacity(0.30)))
+                        .frame(width: 24, height: 24)
+                        .shadow(color: T1Palette.fnCyan.opacity(0.95), radius: 7)
+                } else {
+                    // 未选中常驻态：极简微透半隐光环，鼠标移入时优雅微扩，清晰指示可点击
+                    Circle()
+                        .stroke(
+                            isHovered ? T1Palette.fnCyan.opacity(0.75) :
+                            (hasCustomMap ? T1Palette.emerald.opacity(0.65) : Color.white.opacity(0.32)),
+                            lineWidth: isHovered ? 1.5 : 1.0
                         )
+                        .background(Circle().fill(Color.black.opacity(isHovered ? 0.55 : 0.35)))
+                        .frame(width: isHovered ? 18 : 14, height: isHovered ? 18 : 14)
+                        .shadow(color: isHovered ? T1Palette.fnCyan.opacity(0.5) : Color.clear, radius: 4)
+                }
+
+                // 2. 核心交互微质感圆点
+                Circle()
+                    .fill(
+                        isCapturing ? T1Palette.warmAmber :
+                        (selected ? T1Palette.fnCyan :
+                        (hasCustomMap ? T1Palette.emerald :
+                        (isHovered ? Color.white : Color.white.opacity(0.85))))
+                    )
+                    .frame(
+                        width: (selected || isCapturing) ? 6 : (hasCustomMap ? 5 : 4),
+                        height: (selected || isCapturing) ? 6 : (hasCustomMap ? 5 : 4)
                     )
                     .shadow(
-                        color: isCapturing ? T1Palette.warmAmber.opacity(0.9) :
-                        (selected ? T1Palette.fnCyan.opacity(0.9) : Color.black.opacity(0.3)),
-                        radius: (selected || isCapturing) ? 8 : 2
+                        color: hasCustomMap ? T1Palette.emerald.opacity(0.9) :
+                        ((selected || isCapturing) ? (isCapturing ? T1Palette.warmAmber : T1Palette.fnCyan) : Color.clear),
+                        radius: (hasCustomMap || selected || isCapturing) ? 3 : 0
                     )
-                    .frame(width: width, height: height)
-
-                // 2. 居中微型按键图示文字
-                if !symbolText.isEmpty {
-                    Text(symbolText)
-                        .font(.system(size: symbolText == "OK" ? 10 : 12, weight: .bold))
-                        .foregroundColor(
-                            isCapturing ? T1Palette.warmAmber :
-                            (selected ? Color.white : Color.white.opacity(0.92))
-                        )
-                }
-
-                // 3. 自定义映射成功翡翠绿指示灯
-                if hasCustomMap {
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Circle()
-                                .fill(T1Palette.emerald)
-                                .frame(width: 6, height: 6)
-                                .shadow(color: T1Palette.emerald, radius: 2)
-                        }
-                        Spacer()
-                    }
-                    .frame(width: width + 2, height: height + 2)
-                }
             }
             .frame(width: width, height: height)
-            .scaleEffect((selected || isCapturing) ? 1.15 : 1.0)
+            .contentShape(Circle())
+            .scaleEffect((selected || isCapturing) ? 1.15 : (isHovered ? 1.08 : 1.0))
             .animation(.spring(response: 0.22, dampingFraction: 0.7), value: selected)
             .animation(.spring(response: 0.22, dampingFraction: 0.7), value: isCapturing)
-            .contentShape(Circle())
+            .animation(.easeInOut(duration: 0.15), value: isHovered)
         }
         .buttonStyle(PlainButtonStyle())
         .accessibilityLabel(title)
+        .onHover { hovering in
+            isHovered = hovering
+        }
         .contextMenu(ContextMenu(menuItems: {
             if let id = buttonID {
                 Button("选中按键: \(title)") { s.selectedBackKeyID = id }
