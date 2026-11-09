@@ -750,8 +750,9 @@ final class PulledStringCore {
 
         var currentRope = ropeLen
         if gSettings.adaptiveRope {
-            let speedRatio = min(frameSpeed / 40.0, 1.0)
-            currentRope = max(1.0, ropeLen * (1.0 - speedRatio * 0.75))
+            // 快速扫动时绳长迅速收窄，给大手部动作零阻滞通行；慢速微动时保留完整防抖死区
+            let speedRatio = min(frameSpeed / 20.0, 1.0)
+            currentRope = max(0.5, ropeLen * (1.0 - speedRatio * 0.85))
         }
 
         // 绳子松弛状态：手在微抖或停顿，光标绝对静止停死，彻底消除残余滑行与漂浮感！
@@ -769,15 +770,26 @@ final class PulledStringCore {
 
         var rate = gSettings.followRate
         if gSettings.adaptiveRope {
-            let fastRatio = min(frameSpeed / 40.0, 1.0)
-            rate = rate + (1.0 - rate) * pow(fastRatio, 1.8)
+            // 快速移动时跟手率直达 1.0（100% 原生跟手，零滞后、零吃距离）
+            let fastRatio = min(frameSpeed / 20.0, 1.0)
+            rate = min(1.0, rate + (1.0 - rate) * pow(fastRatio, 1.2))
         }
 
         let stepX = pullUnitX * excess * rate
         let stepY = pullUnitY * excess * rate
 
-        stringX = pullUnitX * currentRope
-        stringY = pullUnitY * currentRope
+        // 核心向量保留：实际位移多少，绳子相对向量相应缩减，严禁直接丢弃剩余距离
+        stringX -= stepX
+        stringY -= stepY
+
+        // 安全限位：防止数值长期漂移积累
+        let remainingDist = hypot(stringX, stringY)
+        if remainingDist > currentRope * 1.5 {
+            let clampUnitX = stringX / remainingDist
+            let clampUnitY = stringY / remainingDist
+            stringX = clampUnitX * currentRope
+            stringY = clampUnitY * currentRope
+        }
 
         return (stepX, stepY)
     }
@@ -1045,18 +1057,23 @@ func hardwareFilteredCallback(
 
     // ────────────────────────────────────────────────────────
     // 🛡️ 非 T1 硬件事件安全处理：
-    // 关键机制：由于 T1 在移动中每帧均将平滑坐标固化（CGWarp）到 WindowServer，
-    // WindowServer 的内部硬件光标永远停留在飞鼠最后的位置。
-    // 当非 T1 硬件（MacBook 自带触控板）物理移动时，平滑交还控制权。
     // ────────────────────────────────────────────────────────
     if !isFromT1 {
-        if senderID != 0 {
-            let raw = eventDelta(event, ioEvent)
-            let moved = hypot(raw.0, raw.1)
-            if moved >= 0.5 {
-                gVirtualPos = nil
-                gCore.resetMotion()
-            }
+        if senderID == 0 {
+            // 🛡️ 核心防御：针对 AppKit / WindowServer 光标形态切换（文本I-Beam、小手、超链接Hover）
+            // 绝不允许 senderID==0 的合成事件携带陈旧坐标瞬移光标！
+            // 强制将事件坐标锚定在当前屏幕光标真实物理位置，且清零位移增量。
+            let cur = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
+            event.location = cur
+            clearPointerDelta(event)
+            return Unmanaged.passRetained(event)
+        }
+        // 物理外设动作（如 MacBook 自带触控板）：重置平滑引擎并无缝交还控制权
+        let raw = eventDelta(event, ioEvent)
+        let moved = hypot(raw.0, raw.1)
+        if moved >= 0.5 {
+            gVirtualPos = nil
+            gCore.resetMotion()
         }
         return Unmanaged.passRetained(event)
     }
@@ -1090,11 +1107,8 @@ func hardwareFilteredCallback(
         if down {
             gCore.notifyClick()
         }
-        // 关键固化：T1 发出的物理点击严格固化在当前飞鼠光标位置，点击绝对零漂移
-        if let vpos = gVirtualPos {
-            event.location = vpos
-            CGWarpMouseCursorPosition(vpos)
-        }
+        let cur = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
+        event.location = cur
         clearPointerDelta(event)
         return Unmanaged.passRetained(event)
     }
@@ -1109,27 +1123,27 @@ func hardwareFilteredCallback(
         return Unmanaged.passRetained(event)
     }
 
-    // 🌟 纯物理硬件位移（直接提取自 DriverKit IOHIDEvent，杜绝任何 CGWarp 污染）
+    // 🌟 纯物理硬件位移（直接提取自 DriverKit IOHIDEvent，杜绝任何干扰）
     let raw = eventDelta(event, ioEvent)
     let rawDx = raw.0
     let rawDy = raw.1
 
-    var pos = gVirtualPos ?? event.location
     let (sdx, sdy) = gCore.process(rawDx: rawDx, rawDy: rawDy)
-    pos.x += CGFloat(sdx)
-    pos.y += CGFloat(sdy)
-    pos = clampToScreens(pos)
-    gVirtualPos = pos
+    if sdx == 0 && sdy == 0 {
+        // 微抖死区吸收：手部微颤直接丢弃，彻底消除微抖，绝不让无效位移污染系统坐标
+        return nil
+    }
 
-    event.location = pos
+    // 锚定于当前屏幕物理光标真实位置，严防开环漂移
+    let current = CGEvent(source: nil)?.location ?? (gVirtualPos ?? event.location)
+    let next = clampToScreens(CGPoint(x: current.x + CGFloat(sdx), y: current.y + CGFloat(sdy)))
+    gVirtualPos = next
+
+    event.location = next
     event.setDoubleValueField(.mouseEventDeltaX, value: sdx)
     event.setDoubleValueField(.mouseEventDeltaY, value: sdy)
-
-    // 🚀【根源修复】将平滑计算后的绝对坐标同步固化写入 WindowServer 内部硬件光标寄存器！
-    // 彻底消灭 WindowServer 内部硬件坐标与 gVirtualPos 的漂移！
-    // 无论是变 I-Beam、小手、箭头，还是系统 UI 重绘，WindowServer 读取的硬件坐标
-    // 永远与 gVirtualPos 100% 绝对一致，物理上从根源彻底杜绝任何形态切换瞬移！
-    CGWarpMouseCursorPosition(pos)
+    event.setIntegerValueField(.mouseEventDeltaX, value: Int64(round(sdx)))
+    event.setIntegerValueField(.mouseEventDeltaY, value: Int64(round(sdy)))
 
     return Unmanaged.passRetained(event)
 }
