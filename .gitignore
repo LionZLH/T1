@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build artifacts
+T1.app
+T1Controller
+T1Smooth
+*.dmg
+build_dmg_tmp/
+
+# Swift / Xcode build
+.build/
+*.o
+*.swp
